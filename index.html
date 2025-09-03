@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <title>Hotel Sogno di Maremma</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Un rifugio immerso nella natura toscana. Scopri il relax e l’eleganza del nostro hotel nel cuore della Maremma.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="immagini/favicon3.png">
+        <link rel= "stylesheet" href= "style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-VSB2P56YSW"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-VSB2P56YSW');
+        </script>
+    </head>
+    <body>
+        <header>
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html"><h1>Hotel <span style="font-style: normal;">★★★★</span> <br>Sogno in Maremma</h1></a>
+                </div>
+                <nav>
+                    <div id="menucont">
+                        <ul>
+                            <li><a href="#chisiamo" class="link"><span>Chi siamo</span></a></li>
+                            <li><a href="rooms.html" class="link"><span>Le nostre camere</span></a></li>
+                            <li><a href="#services" class="link"><span>I servizi</span></a></li>
+                            <li><a href="rooms.html #book-section" class="link"><span>Prenota ora</span></a></li>
+                        </ul>
+                    </div>
+                    <label class="ham icon" for="ham">
+                        <input type="checkbox" id="ham" onclick=show()>
+                        <span class="line line1"></span>
+                        <span class="line line2"></span>
+                        <span class="line line3"></span>
+                    </label>
+                </nav>
+            </div>
+            <div class="lowheader">
+                <h2>NATURA e RELAX</h2>
+            </div>
+        </header>
+        <main>
+            <section id="chisiamo">
+                <!--introduction to the hotel-->
+                <h3>Esplora l'Emozione della Vacanza</h3>
+                <p>Unisciti a noi per trascorrere un soggiorno unico ed 
+                    indimenticabile in un luogo che incarna la perfetta fusione tra modernità e tradizione. Le nostre porte sono aperte 
+                    per farti vivere un'esperienza che ti lascerà senza parole.</p> <br>   
+                    <p>Immerso nella magica <strong>Maremma</strong>, il nostro hotel offre un'oasi di tranquillità e bellezza. La recente
+                     ristrutturazione ha arricchito ogni angolo con tocchi contemporanei, pur preservando con amore il calore e l'essenza 
+                     della tradizione. </p> <br>
+                    <p>Ti sentirai in dolce armonia con i <strong>paesaggi</strong> mozzafiato, mentre il nostro staff ti 
+                     coccolerà con i migliori <strong>comfort</strong> e servizi di qualità. E se desiderassi esplorare, ci troviamo a soli pochi chilometri  
+                    da Firenze e da altri borghi incantevoli, pronti ad accoglierti con le loro storie e le loro tradizioni. <br></p>
+                    <a class="button" href="#services">Scopri l'hotel</a>
+            </section>
+            <div class="grid-container">
+                <img src="immagini/nature2.jpg" alt="colline" class="paes">
+                <img src="immagini/camera con vasca2.jpg" alt="camera"  class="item4">
+                <img src="immagini/poolpart3.jpg" alt="piscina"  class="pool">
+                <img src="immagini/food.jpg" alt="cibo"  class="item6">
+            </div>
+            <section class="formprenotazione">
+                <div id="book">
+                    <h3>Prenota adesso</h3>
+                    <p>Vedi subito le migliori offerte sul periodo che preferisci</p>
+                </div>
+                <form action="rooms.html" method="get">
+                    <input type="hidden" name="fromHome" value="true">
+                    <fieldset class="two">
+                        <label for="in">Check-in <input type="date" class="in" id="checkin"></label>
+                        <label for="out">Check-out <input type="date" class="out" id="checkout"></label>
+                    </fieldset>
+                    <fieldset class="three">
+                            <label for="nrooms">Camere <input type="number" class="nrooms" value="1" min="1"></label>
+                            <label for="adults">Adulti <input type="number" class="adults" value="1" min="1"></label>
+                            <label for="kids">Bambini <input type="number" class="kids" value="0" min="0"></label>
+                    </fieldset>
+                    <fieldset>
+                            <label class="select-label" for="board" >Trattamento <select name="board" class="board">
+                                <option value="0">Bed & Breakfast </option>
+                                <option value="1">Mezza Pensione</option>
+                                <option value="2">Pensione Completa</option>
+                                </select>
+                            </label>
+                    </fieldset>
+                    <a href="rooms.html" class="button">Vedi disponibilità</a>
+                </form>             
+            </section>
+            <img class="cover" src="immagini/services-cover.jpg" alt="natura e relax" aria-hidden="true">
+            <section id="services">
+                <h3>Siamo a vostra disposizione!</h3>
+                <p class="pserv">Dedicati un momento di coccola, scopri i nostri servizi esclusivi. </p>
+                <div class="service left">
+                    <div>
+                        <h4>Le piscine</h4> 
+                        <p>Vivrai il piacere dell'acqua in due dimensioni distinte presso le nostre piscine. All'aperto un invito a 
+                            rinfrescarti come spettatore di un panorama mozzafiato. All'interno, la vasca di acqua termale riscaldata 
+                            crea un rifugio di puro relax. Due angoli di paradiso, un'unica promessa di benessere, indipendentemente dal 
+                            clima esterno.</p>
+                    </div>
+                    <img src="immagini/piscina interna.jpg" alt="piscina interna">
+                </div>
+                <div class="service right">
+                    <img src="immagini/spa2.jpg" alt="spa">
+                    <div>
+                        <h4>La spa</h4> 
+                        <p>Nel nostro rifugio di benessere, concedetevi il piacere avvolgente dei massaggi rigeneranti, immergetevi nella 
+                            calda pura della sauna e lasciate che il bagno turco avvolga i vostri sensi. Sperimentate le emozioni uniche 
+                            delle docce sensoriali, immergendovi in fragranze avvolgenti. Esplorate i nostri percorsi sensoriali, 
+                            studiati per stimolarvi con magici suoni, profumi e sensazioni caldo/freddo. Ogni trattamento è pensato per 
+                            rigenerare mente e corpo, e portarvi in un'atmosfera di pace.</p>
+                    </div>
+                </div>
+                <div class="service left">
+                    <div>
+                        <h4>Il ristorante</h4> 
+                        <p>Il nostro ristorante incanta i palati con un'esperienza gastronomica che celebra la cucina locale. Assaporate 
+                            l'autenticità del territorio in ogni boccone dei nostri piatti preparati con ingredienti freschissimi. 
+                            La pasta fresca, lavorata con maestria e passione dal nostro chef, è una delizia unica che aggiunge un tocco 
+                            di tradizione al vostro viaggio culinario. Accompagnate il vostro pasto con una selezione curata di vini 
+                            tipici locali, che esaltano i sapori autentici dei nostri piatti.</p>
+                    </div>
+                    <img class="topimg2" src="immagini/restaurant.jpg" alt="immagine rappresentativa del ristorante">
+                </div>
+                <div class="service right">
+                    <img src="immagini/area relax.jpg" alt="area relax">
+                    <div>
+                        <h4>L'area relax</h4> 
+                        <p>L'area relax è un'oasi di tranquillità dove il tempo si dilata, e il solo pensiero è godersi la dolcezza del 
+                            momento. Lettini confortevoli accolgono il vostro relax, mentre dettagli raffinati creano un'atmosfera di 
+                            serenità. Potrete immergervi in una lettura avvolgente o lasciarvi trasportare dall'ascolto di musica 
+                            armoniosa, arricchendo il vostro tempo di riposo. Per completare l'esperienza, offriamo una selezione di 
+                            tisane che delizieranno i vostri sensi e il vostro spirito</p>
+                    </div>
+                </div>
+                <div class="service left">
+                    <div>
+                        <h4>Il noleggio bici</h4> 
+                        <p>Esplora la Maremma a pedali con il nostro servizio di noleggio biciclette. Percorri pittoreschi sentieri, scopri 
+                            angoli nascosti e respira la libertà di esplorare questa terra unica su due ruote. Mettiamo a tua disposizione
+                             dettagliate mappe di percorsi, affinché tu possa pianificare la tua avventura. Se desideri condividere 
+                             questa esperienza con altri appassionati, organizziamo anche uscite in gruppo, offrendo l'opportunità di 
+                             condividere l'esplorazione con compagni di viaggio entusiasti.</p>
+                    </div>
+                    <img class="topimg" src="immagini/bike.jpg" alt="servizio noleggio biciclette">
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div id="ftcontainer">
+                <div>
+                    <div class="hsm">
+                        <p class="f-logo">HSM</p>
+                        <span>★★★★</span>
+                    </div>
+                    <p>p.iva IT 40722520539</p>
+                    <p>tel 463 369 44</p>
+                    <p><address>Strada di Tesoro, 2, Radicondoli (SI)</address></p>
+                    <p>info@hotelsognoinmaremma.it</p>
+                    <p>(data and map are fictional for <u>illustrative</u> purposes only)</p>
+                </div>
+                <div class="subcont">
+                <div class="foot">
+                    <h5>Dove siamo?</h5> <br>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d2116.4872503768825!2d11.03744590934233!3d43.26388518460214!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sit!2sit!4v1700587965645!5m2!1sit!2sit" width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                
+                    <div class="foot">
+                        <h5>Info</h5> <br>
+                        <a href="">Termini e condizioni</a><br>
+                        <a href="">Politica sulla privacy</a><br>
+                        <a href="">Newsletter</a>
+                    </div>
+                    <div class="foot">
+                        <h5>Altro</h5> <br>
+                        <a href="">VIP spa e piscine</a> <br>
+                        <a href="">Menu ristorante</a><br>
+                        <a href="">Escursioni nella Maremma</a><br>
+                        <a href="">Eventi</a>
+                        <div class="social">
+                            <iconify-icon icon="mdi:instagram" width="24" height="24"></iconify-icon> <br>
+                            <iconify-icon icon="ri:facebook-fill" width="24" height="24"></iconify-icon>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p class="cr">© 2023 Hotel Sogno in Maremma. Tutti i diritti riservati.</p>
+            </div>
+        </footer>
+        <script src="script.js" type="text/javascript"></script>
+        <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+        <script src="https://kit.fontawesome.com/cc3bfee917.js" crossorigin="anonymous"></script>
+    </body>
+</html>

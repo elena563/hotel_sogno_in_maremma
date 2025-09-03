@@ -1,0 +1,700 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Playfair Display", "Optima", serif;
+    box-sizing: border-box;
+    
+ }
+ /*font setting*/
+ @font-face {
+	font-family: 'Playfair Display';
+	src: local('playfair'), url('PlayfairDisplay-Regular.ttf') format('truetype');
+    font-display: swap;
+	}
+/*header*/
+ header{
+    background-color: #821d1d;
+    color:#FCFAFA;
+    min-height: 80px;
+ }
+ .logo{
+    position: absolute;
+    background-color: #FCFAFA;
+    max-width: 50%;
+ }
+ .logo a{
+    text-decoration: none;
+ }
+ .lowheader{
+    background-image: url(immagini/hotel6.2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    width: 100%;
+ }
+h1{
+    color: #8C5B26;
+    font-family: 'Courgette', cursive;
+    font-size: 1.7em;
+    font-weight: normal;
+    font-style: italic;
+    word-spacing: 0.03rem;
+    margin: 1em;
+}
+h1 span{
+    letter-spacing: 0.5rem;
+    font-size: 2rem;
+    padding: 0.3em;
+}
+ h2{
+    text-align: center;
+    padding: 15%;
+    font-size: 7vw;
+ }
+.navbar{
+    display: flex;
+    padding: 2em;
+    word-spacing: 1.5rem; 
+}
+span{
+    word-spacing: normal;
+}
+nav ul li{
+    display: inline-block;
+}
+ul{
+    list-style-position: inside;
+}
+nav{
+    text-align: center;
+    flex-grow: 1;
+}
+nav a{
+    color:#FCFAFA;
+    text-decoration: none;
+}
+#ham{
+    display:none;
+}
+/*main page*/
+body{
+    background-color: #EDDBC0;
+    color: #554445;
+}
+#chisiamo{
+    margin: 3em 4em 1em 4em;
+}
+h3{
+    color: #8C5B26;
+    padding: 0.5em 0;
+    text-align: center;
+    font-family: "Playfair Display";
+    font-size: 2rem;
+}
+main p{
+    font-size: 1.2em;
+    color: #554445;
+}
+#chisiamo .button{
+    margin: 3em auto;
+}
+.button{
+    display: block;
+    width: min(250px, 85%);
+    margin: 0 auto;
+    background-color: #8C5B26;
+    padding: 16px 32px;
+    margin-bottom: 0;
+    font-size: 1.1em;
+    text-decoration: none;
+    color:#FCFAFA;
+    text-align: center;
+ }
+ .button:hover{
+    text-decoration: underline;
+ }
+.grid-container{
+    display: grid;
+    width: 100%;
+    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+    box-sizing: border-box;
+}
+.grid-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.paes{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+.pool{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.item6{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+.item4{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+/*services*/
+#services, #book-section{
+    margin: 2em 4em 2em 4em;
+}
+
+#services{
+    overflow-x: hidden;
+}
+.cover{
+    object-fit: cover;
+    width: 100%;
+    height:18em;
+}
+.service{
+    display: flex;
+    gap: 4em;
+    margin-top: 4em;
+    transition: all 1s ease-out;
+}
+.left{
+    transform: translateX(-1000px);
+}
+.right{
+    transform: translateX(1000px);
+}
+.visible{
+    transform: translateX(0);
+}
+.service img{
+    width: 18em;
+    object-fit: contain;
+}
+.pserv{
+    text-align: center;
+}
+.service h4{
+    font-size: 1.4rem;
+    padding-bottom: 1rem;
+}
+/*booking form*/
+.formprenotazione{
+    margin: 2em 3em 2em 3em;
+    gap: 2em;
+    display: flex;
+    justify-content: space-around;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: max(290px, 30%);
+    min-width: 290px;
+}
+fieldset{
+    display: flex;
+    flex-direction: row;
+    border: none;
+}
+.two{
+    justify-content: space-around;
+}
+.three{
+    justify-content: space-between;
+}
+form input{
+    display: inline;
+    border: none;
+    width: 100%;
+    padding: 0.5em;
+    margin-top: 0.3em;
+    font-size: 0.9em;
+    text-align: center;
+}
+#book-section form{
+    gap:0;
+    margin-bottom: 3em;
+}
+#book-section form input{
+    margin-top: 0.1em; 
+}
+#book-section fieldset{
+    justify-content: space-between;
+}
+.two label{
+    width: 8em;
+}
+.three label{
+    width: 5em;
+}
+form :is(input, select):focus{
+    outline: 2px solid #8C5B26;
+}
+label{
+    color:#8C5B26;
+    font-weight: bold;
+    display: block;
+    margin: 0.5em 0;
+    height: unset;
+}
+form .button{
+    width: 80%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border: none;
+}
+select{
+    border: none;
+    width: 100%;
+    padding: 0.5em;
+    margin-top: 0.1em;
+    cursor: pointer;
+}
+.select-label{
+    width: 100%;
+    margin-bottom: 1em;
+}
+.flex-cont{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.grower{
+    flex-grow: 1;
+}
+.flex-cont.grower{
+    gap:10px;
+}
+.bigger{
+    flex-basis: 50%;
+}
+.flex-col{
+    display: flex;
+    flex-direction: column;
+}
+.windows {
+    flex-basis: 70%;
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+    transition: opacity 0.5s ease, visibility 0s linear 0.5s;
+}
+.show {
+    opacity: 1;
+    visibility: visible;
+    display: block; /* Imposta display a 'block' o quello che preferisci per la finestra */
+    transition: opacity 0.5s ease, visibility 0s linear 0s;
+}
+.flex-form{
+    justify-content: center;
+}
+.priceCont{
+    flex-basis: 50%;
+    text-align: center;
+}
+/*footer*/
+footer{
+    background-color: #821d1d;
+    color: #FCFAFA;
+    margin-top: 4em;
+    padding: 2em 2em 1em 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+#ftcontainer{
+    display: flex;
+    gap: 2em;
+    justify-content: space-between;
+}
+.subcont{
+    display: flex;
+    gap: 2em;
+}
+.f-logo{
+    font-style: italic;
+    font-size: 2em;
+    font-family: 'Courgette', cursive;
+}
+footer :is(h5, a){
+    color: #FCFAFA;
+    text-decoration: none;
+}
+.hsm{
+    text-align: center;
+}
+iconify-icon{
+    background-color: #FCFAFA;
+    color: #821d1d;
+    padding: 0.3rem;
+    margin: 0.1rem;
+    border-radius: 100%;
+}
+iconify-icon:hover{
+    background-color: #821d1d;
+    color: #FCFAFA;
+    cursor: pointer;
+}
+.social{
+    margin-top: 1rem;
+} 
+/*rooms page*/    
+.rooms-section{
+    box-shadow: 0px 0px 8px 2px #8C5B26;
+} 
+#rooms{
+    margin: 7em 2em 3em 2em;
+}                
+.slot{
+    margin-top: 2em;
+    display: flex;
+    justify-content: space-around;
+    gap: 2em;
+    height: 14em;
+}
+.room-type{
+    background-color: rgb(252, 250, 250, 0.7);
+    position: relative;
+    top: 4.3em;
+    z-index: 1;
+    padding: 1em 1em;
+    text-align: center;
+    color:#8C5B26;
+}
+.room-option{
+    object-fit: cover;
+    height: 14em;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%; 
+    cursor: pointer;
+} 
+h5, h4{
+    color: #8C5B26;
+    font-family: "Playfair Display";
+    font-size: 1.2rem;
+}
+.slot h4{
+    text-align: center;
+    padding: 1em 0;
+}
+.economy{
+    background-image: url("immagini/camera economy.jpg");
+}
+.comfort{
+    background-image: url("immagini/camera comfort1.jpg");
+}
+.deluxe{
+    background-image: url("immagini/suite deluxe.jpg");
+}
+.vasca{
+    background-image: url("immagini/camera con vasca2.jpg");
+}
+.room_gallery{
+    flex-direction: row;
+    gap: 1em;
+    background-color: #FCFAFA;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    display: flex;
+    padding: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.5s ease;
+}
+.room_gallery.open {
+    max-height: 300px; /* o qualsiasi altezza massima desideri */
+    opacity: 1;
+    width: 100%
+}
+.r-text{
+    display: flex;
+    gap: 2em;
+    flex-grow: 2;
+    background-color: #FCFAFA;
+}
+.r-text2{
+    display: flex;
+    gap: 2em;
+    flex-grow: 2;
+    background-color: #FCFAFA; 
+}
+.r-text2 img{
+    object-fit: cover;
+    width: 270px;
+}
+
+.r-images{
+    display: flex;
+    flex-basis: 70%;
+    gap: 1em;
+    flex-grow: 1;
+    overflow-x: scroll;
+}
+.mobile{
+    display: none;
+}
+.padding{
+    padding: 1em;
+}
+.room-desc{
+    border-top: 0.1px solid #8C5B26;
+    padding-top: 0.2rem;
+    margin-top: 0.2rem;
+}
+.amenities{
+    font-size: 0.8rem; 
+}
+.flex-am{
+    flex-grow: 1;
+    display: grid;
+    flex-direction: column;
+}
+.flex-desc{
+    flex-shrink: 10;
+}
+.price{
+    align-self: flex-end;
+    margin-bottom: 0.3rem;
+}
+#num1, #num2, #num3, #num4{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.small{
+    width: 100%;
+    padding: 8px 16px;
+    align-self: flex-end;
+}
+.tiny{
+    width: 50%;
+    padding: 8px 16px;
+    margin-left: 5px;
+    margin-top: 5px;
+    align-self: flex-end;
+}
+
+/*responsive dropdown header for mobile*/
+@media (max-width: 1100px) {
+    ul{
+        display: flex;
+        gap: 2em;
+        flex-direction: column;  
+    }
+    #menucont{
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 63px;
+        left: 0;
+        background-color:#821d1d;
+        padding: 2em;
+        padding-top: 8em;
+        z-index: 2;
+        min-height: 0;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.5s ease, opacity 0.5s ease;
+    }
+    .logo{
+        z-index: 3;
+    }
+    
+    .ham{
+        height:19.5px;
+        width: 24px;
+        position: absolute;
+        top: 23px;
+        align-self: center;
+        right: 2em;
+        display: flex;
+        z-index: 1;
+        flex-direction: column;
+        justify-content: space-between;
+        background: transparent;
+        align-items: center;
+    }
+    .line {
+        display: block;
+        width: 100%;
+        background: white;
+        flex-basis: 15%;
+        transform: rotate(0deg);
+        transition: .25s ease-in-out;
+      }
+    #ham {
+      display: none;
+    }
+      #menucont.openmenu {
+        max-height: 482px; /* o qualsiasi altezza massima desideri */
+        opacity: 1;
+    }
+    .line1{
+        transform-origin: left center;
+      }
+      .line2{
+          transform-origin: left center;
+      }
+      .line3{
+          transform-origin: left center;
+      }
+      .ham input:checked ~ .line1 {
+          transform: rotate(43deg);
+          top: 0px;
+          left: 5px;
+      }     
+      .ham input:checked ~ .line2 {
+          width: 0%;
+          opacity: 0;
+      }      
+      .ham input:checked ~ .line3 {
+          transform: rotate(-42deg);
+          top: 28px;
+          left: 5px;
+      }
+}
+@media screen and (max-width: 850px) {
+    #ftcontainer{
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 800px){
+    .service{
+        flex-direction: column;
+        gap: 1em;
+        margin-top: 3em;
+    }
+    .service img {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        height: 14em;
+        object-fit: cover;
+    }
+    .cover{
+        height: 12em;
+    }
+    .pserv{
+        text-align: left;
+    }
+    .topimg{
+        object-position: 50% 0%;
+    }
+    .topimg2{
+        object-position: 50% 30%;
+    }
+    .r-text2{
+        flex-direction: column;
+    }
+    .r-text2 img{
+        width: 100%;
+    }
+}
+@media (max-width: 700px){
+    .room_gallery{
+        flex-direction: column;
+    }
+    .room_gallery.open {
+        max-height: 700px;
+    }
+    .r-images{
+        overflow-x: scroll;
+    }
+    h1{
+        font-size: 4vw;
+    }
+    h1 span{
+        font-size: 5vw;
+        letter-spacing: 1vw;
+    }
+    h2{
+        padding-top: 25%;
+        padding-bottom: 25%;
+        font-size: 3rem;
+    }
+    .formprenotazione{
+        margin: 1em 2em 2em 2em;
+    }
+}
+@media screen and (max-width: 650px){
+
+    .formprenotazione{
+        flex-direction: column;
+        gap: 1em;
+        align-items: center;
+    }
+    form{
+        width: 60%;
+    }
+    .grid-container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .grid-container img {
+        height: auto; /* Le immagini si adatteranno automaticamente alla larghezza */
+    }
+    #chisiamo, .formprenotazione{
+        margin: 1.5em;
+    }
+    #chisiamo, #services{
+        margin: 3em 1.5em 1em 1.5em;
+    }
+    #services{
+        margin: 1em 1.5em;
+    }
+    .subcont{
+        flex-direction: column;
+        align-items: center;
+    }
+    .foot{
+        text-align: center;
+    }
+    #rooms{
+        margin: 7em 1em 3em 1em;
+    }
+    #book-section{
+        margin: 2em 1em;
+    }
+    .slot{
+        margin-top: 1em;
+        gap: 1em;
+    }
+}
+@media (max-width: 500px){
+    .slot{
+        flex-wrap: wrap;
+        height: unset;
+    }
+    #rooms{
+        display: flex;
+        flex-direction: column;
+    }
+    .mobile{
+        display: block;
+        margin-top: 1em;
+    }
+    .comfort.desktop, .vasca.desktop{
+        display: none;
+    }
+    .r-text{
+        flex-direction: column;
+    }
+    .price{
+        text-align: center;
+    }
+}
+@media (max-width: 370px){
+    #num1, #num2, #num3, #num4{
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <title>Hotel Sogno di Maremma</title>
+        <meta charset="UTF-8">
+        <meta description="Camere eleganti e confortevoli in Maremma. Vivi un’esperienza di relax e natura con il massimo del comfort.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="immagini/favicon3.png">
+        <link rel= "stylesheet" href= "style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+       <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI/t1f1qOd7lHao3+5uvT6sPQi3U5r1NNf+e4Ns=" crossorigin="anonymous"></script>-->
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-VSB2P56YSW"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-VSB2P56YSW');
+        </script>
+    </head>
+    <body>
+        <header>
+            <div class="navbar">
+                <div class="logo rooms-section">
+                    <a href="index.html"><h1>Hotel <span style="font-style: normal;">★★★★</span> <br>Sogno in Maremma</h1></a>
+                </div>
+                <nav>
+                    <div id="menucont">
+                        <ul>
+                            <li><a href="index.html #chisiamo" class="link"><span>Chi siamo</span></a></li>
+                            <li><a href="rooms.html" class="link"><span>Le nostre camere</span></a></li>
+                            <li><a href="index.html #services" class="link"><span>I servizi</span></a></li>
+                            <li><a href="#book-section" class="link"><span>Prenota ora</span></a></li>
+                        </ul>
+                    </div>
+                    <label class="ham icon" for="ham">
+                        <input type="checkbox" id="ham" onclick=show()>
+                        <span class="line line1"></span>
+                        <span class="line line2"></span>
+                        <span class="line line3"></span>
+                    </label>
+                </nav>
+            </div>
+        </header>
+        <section id="rooms">
+            <div class="slot"> <!--slot camere che si aprono con js-->
+                <div class="room-option economy desktop">   
+                    <h4 class="room-type">Camera Economy</h4></div>
+                <div class="room-option comfort desktop"> 
+                    <h4 class="room-type">Camera Comfort</h4>
+                </div>
+            </div>
+            <div class="room_gallery">
+                <div class="r-text">
+                    <div class="flex-desc">
+                        <div class="amenities">
+                            <h5>Camera Economy</h5>
+                            <p>25m<sup>2</sup> doppia | 35m<sup>2</sup> quadrupla <br></p>
+                        </div>
+                        <p class="room-desc">La camera Economy offre un'accogliente soluzione per chi 
+                        cerca comfort a un prezzo accessibile. Semplice ed elegante, 
+                        questa camera è ideale per chi desidera un soggiorno piacevole senza eccessivi 
+                        fronzoli.</p>
+                    </div>
+                    <p class="amenities flex-am"><span><i class="fa-solid fa-wifi fa-sm" style="color: #554445;"></i> Wi-fi gratuito<br>
+                        <i class="fa-solid fa-snowflake fa-sm" style="color: #554445;"></i> Aria condizionata<br>
+                        <i class="fa-solid fa-vault fa-sm" style="color: #554445;"></i> Cassaforte<br>
+                        <i class="fa-solid fa-tv fa-sm" style="color: #554445;"></i> Tv a schermo piatto<br>
+                        <i class="fa-solid fa-martini-glass-citrus" style="color: #554445;"></i> Minibar<br></span>
+                        <span class="price">da <span class="num">69€</span>/notte</span>
+                        <a class="button small" href="#book-section">Prenota</a>
+                    </p>
+                </div>
+                <div class="r-images">
+                    <img src="immagini/camera economy2.jpg" alt="" height="200em">
+                    <img src="immagini/bagno economy.jpg" alt="" height="200em">
+                    <img src="immagini/camera letti singoli.jpg" alt="" height="200em">
+                </div>
+            </div>
+            <div class="room-option comfort mobile"> 
+                <h4 class="room-type">Camera Comfort</h4>
+            </div>
+            <div class="room_gallery">
+                <div class="r-text">
+                    <div class="flex-desc">
+                        <div class="amenities">
+                            <h5>Camera Comfort</h5>
+                            <p>30m<sup>2</sup> doppia | 40m<sup>2</sup> quadrupla <br></p> 
+                        </div>
+                        <div class="room-desc">
+                        <p>La camera Comfort è progettata per offrire un'esperienza 
+                        di soggiorno più spaziosa e raffinata. Con arredi confortevoli e dettagli curati, 
+                        questa camera è pensata per chi desidera un tocco in più di lusso senza rinunciare 
+                        alla praticità.</p></div>
+                    </div>
+                    <p class="amenities flex-am"><span><i class="fa-solid fa-wifi fa-sm" style="color: #554445;"></i> Wi-fi gratuito<br>
+                        <i class="fa-solid fa-snowflake fa-sm" style="color: #554445;"></i> Aria condizionata<br>
+                        <i class="fa-solid fa-vault fa-sm" style="color: #554445;"></i> Cassaforte<br>
+                        <i class="fa-solid fa-tv fa-sm" style="color: #554445;"></i> Tv a schermo piatto<br>
+                        <i class="fa-solid fa-martini-glass-citrus" style="color: #554445;"></i> Minibar<br></span>
+                        <span class="price">da <span class="num">85€</span>/notte</span>
+                        <a class="button small" href="#book-section">Prenota</a>
+                    </p>
+                </div>
+                <div class="r-images">
+                    <img src="immagini/camera comfort1.jpg" alt="" height="200em">
+                    <img src="immagini/bagno comfort.jpg" alt="" height="200em">
+                    <img src="immagini/letti singoli.jpg" alt="" height="200em">
+                </div>
+            </div>
+            <div class="slot">
+                <div class="room-option deluxe desktop"> 
+                    <h4 class="room-type">Suite Deluxe</h4>
+                </div>
+                <div class="room-option vasca desktop"> 
+                    <h4 class="room-type">Suite con Vasca Idromassaggio</h4>
+                </div>
+            </div>
+            <div class="room_gallery">
+                <div class="r-text">
+                    <div class="flex-desc">
+                        <div class="amenities">
+                            <h5>Suite Deluxe</h5>
+                            <p>45m<sup>2</sup> doppia | 55m<sup>2</sup> quadrupla <br></p> 
+                        </div>
+                        <div class="room-desc">
+                            <p>La Suite Deluxe rappresenta l'eccellenza del nostro hotel.
+                            Questa spaziosa suite è arredata con gusto, offrendo un ambiente lussuoso e 
+                            raffinato. Con una zona living separata e servizi esclusivi, la Suite Deluxe è 
+                            pensata per coloro che cercano un'esperienza di soggiorno straordinaria.</p>
+                        </div>
+                    </div>
+                    <p class="amenities flex-am"><span><i class="fa-solid fa-wifi fa-sm" style="color: #554445;"></i> Wi-fi gratuito<br>
+                        <i class="fa-solid fa-snowflake fa-sm" style="color: #554445;"></i> Aria condizionata<br>
+                        <i class="fa-solid fa-vault fa-sm" style="color: #554445;"></i> Cassaforte<br>
+                        <i class="fa-solid fa-tv fa-sm" style="color: #554445;"></i> Tv a schermo piatto<br>
+                        <i class="fa-solid fa-martini-glass-citrus" style="color: #554445;"></i> Minibar<br>
+                        <i class="fa-solid fa-couch" style="color: #554445;"></i> Area soggiorno <br></span>
+                        <span class="price">da <span class="num">102€</span>/notte</span>
+                        <a class="button small" href="#book-section">Prenota</a>
+                    </p>
+                </div>
+                <div class="r-images">
+                    <img src="immagini/suite deluxe.jpg" alt="" height="200em">
+                    <img src="immagini/bagno deluxe.jpg" alt="" height="200em">
+                </div>
+           </div>
+            <div class="room-option vasca mobile"> 
+                <h4 class="room-type">Suite con Vasca Idromassaggio</h4>
+            </div>
+            <div class="room_gallery">
+                <div class="r-text">
+                    <div class="flex-desc">
+                        <div class="amenities">
+                            <h5>Suite con Vasca Idromassaggio</h5>
+                            <p>35m<sup>2</sup> doppia</p>
+                        </div>
+                    <div class="room-desc"><p>La Suite con Vasca Idromassaggio privata offre un'esperienza di 
+                    relax senza pari. Rilassati e 
+                    lascia che la dolce intimità delle bolle ti porti via lo stress, creando ricordi 
+                    indimenticabili della tua permanenza.</p></div>
+                    </div>
+                    <p class="amenities flex-am"><span><i class="fa-solid fa-wifi fa-sm" style="color: #554445;"></i> Wi-fi gratuito<br>
+                        <i class="fa-solid fa-snowflake fa-sm" style="color: #554445;"></i> Aria condizionata<br>
+                        <i class="fa-solid fa-vault fa-sm" style="color: #554445;"></i> Cassaforte<br>
+                        <i class="fa-solid fa-tv fa-sm" style="color: #554445;"></i> Tv a schermo piatto<br>
+                        <i class="fa-solid fa-martini-glass-citrus" style="color: #554445;"></i> Minibar<br>
+                        <i class="fa-solid fa-hot-tub-person" style="color: #554445;"></i> Vasca idromassaggio privata <br></span>
+                        <span class="price">da <span class="num">120€</span>/notte</span>
+                        <a class="button small" href="#book-section">Prenota</a>
+                    </p>
+                </div>
+                <div class="r-images">
+                    <img src="immagini/camera con vasca2.jpg" alt="" height="200em">
+                    <img src="immagini/bagno suite vasca.jpg" alt="" height="200em">
+                </div>
+            </div>
+        </section>
+        <section id="book-section">
+            <h3>Prenota</h3>
+            <div class="">
+                <div class="flex-cont flex-form">
+                    <form>
+                        <fieldset class="two">
+                            <label for="in">Check-in <input type="date" class="in" id="checkin"></label>
+                            <label for="out">Check-out <input type="date" class="out" id="checkout"></label>
+                        </fieldset>
+                        <fieldset class="three">
+                                <label for="nrooms">Camere <input type="number" class="nrooms" value="1" min="1"></label>
+                                <label for="adults">Adulti <input type="number" class="adults" value="1" min="1"></label>
+                                <label for="kids">Bambini <input type="number" class="kids" value="0" min="0"></label>
+                        </fieldset>
+                        <fieldset>
+                                <label class="select-label" for="board" >Trattamento <select name="board" class="board">
+                                    <option value="0">Bed & Breakfast </option>
+                                    <option value="1">Mezza Pensione</option>
+                                    <option value="2">Pensione Completa</option>
+                                    </select>
+                                </label>
+                        </fieldset>
+                        <button class="button bookbutton">Vedi disponibilità</button>
+                    </form>
+                </div>  
+                <div class="windows"> 
+                    <div class="">
+                        <div class="r-text2 padding">                 
+                            <div class="amenities flex-col grower">
+                                <span class="flex-cont grower">
+                                <div class="bigger"><h5>Camera Economy</h5>
+                                <p>25m<sup>2</sup> doppia | 35m<sup>2</sup> quadrupla <br></p></div>
+                                <p><i class="fa-solid fa-wifi fa-sm" style="color: #554445;"></i> Wi-fi gratuito<br>
+                                <i class="fa-solid fa-snowflake fa-sm" style="color: #554445;"></i> Aria condizionata<br>
+                                <i class="fa-solid fa-vault fa-sm" style="color: #554445;"></i> Cassaforte<br>
+                                <i class="fa-solid fa-tv fa-sm" style="color: #554445;"></i> Tv a schermo piatto<br>
+                                <i class="fa-solid fa-martini-glass-citrus" style="color: #554445;"></i> Minibar<br></p>
+                                </span>
+                                <div class="flex-cont">
+                                <span class="priceCont economyr"> <span id="num1"></span>/notte</span>
+                                <a class="button tiny" href="">Prenota</a></div>
+                            </div>
+                            <img src="immagini/camera economy2.jpg" alt="" height="200em">
+                        </div>
+                    </div> 
+                </div>
+                <div class="windows"> 
+                    <div class="">
+                        <div class="r-text2 padding">                 
+                            <div class="amenities flex-col grower">
+                                <span class="flex-cont grower">
+                                <div class="bigger"><h5>Camera Comfort</h5>
+                                <p>30m<sup>2</sup> doppia | 40m<sup>2</sup> quadrupla <br></p></div>
+                                <p><i class="fa-solid fa-wifi fa-sm" style="color: #554445;"></i> Wi-fi gratuito<br>
+                                    <i class="fa-solid fa-snowflake fa-sm" style="color: #554445;"></i> Aria condizionata<br>
+                                    <i class="fa-solid fa-vault fa-sm" style="color: #554445;"></i> Cassaforte<br>
+                                    <i class="fa-solid fa-tv fa-sm" style="color: #554445;"></i> Tv a schermo piatto<br>
+                                    <i class="fa-solid fa-martini-glass-citrus" style="color: #554445;"></i> Minibar<br></p>
+                                </span>
+                                <div class="flex-cont">
+                                <span class="priceCont comfortr"> <span id="num2"></span>/notte</span>
+                                <a class="button tiny" href="">Prenota</a></div>
+                            </div>
+                            <img src="immagini/camera comfort1.jpg" alt="" height="200em">
+                        </div>
+                    </div> 
+                </div>
+                <div class="windows"> 
+                    <div class="">
+                        <div class="r-text2 padding">                 
+                            <div class="amenities flex-col grower">
+                                <span class="flex-cont grower">
+                                <div class="bigger"><h5>Suite Deluxe</h5>
+                                <p>45m<sup>2</sup> doppia | 55m<sup>2</sup> quadrupla <br></p></div>
+                                <p><i class="fa-solid fa-wifi fa-sm" style="color: #554445;"></i> Wi-fi gratuito<br>
+                                <i class="fa-solid fa-snowflake fa-sm" style="color: #554445;"></i> Aria condizionata<br>
+                                <i class="fa-solid fa-vault fa-sm" style="color: #554445;"></i> Cassaforte<br>
+                                <i class="fa-solid fa-tv fa-sm" style="color: #554445;"></i> Tv a schermo piatto<br>
+                                <i class="fa-solid fa-martini-glass-citrus" style="color: #554445;"></i> Minibar<br>
+                                <i class="fa-solid fa-couch" style="color: #554445;"></i> Area soggiorno <br></p>
+                                </span>
+                                <div class="flex-cont">
+                                <span class="priceCont deluxes"> <span id="num3"></span>/notte</span>
+                                <a class="button tiny" href="">Prenota</a></div>
+                            </div>
+                            <img src="immagini/suite deluxe.jpg" alt="" height="200em">
+                        </div>
+                    </div> 
+                </div>
+                <div class="windows"> 
+                    <div class="">
+                        <div class="r-text2 padding">                 
+                            <div class="amenities flex-col grower">
+                                <span class="flex-cont grower">
+                                <div class="bigger"><h5>Suite con Vasca Idromassaggio</h5>
+                                <p>35m<sup>2</sup> doppia <br></p></div>
+                                <p><i class="fa-solid fa-wifi fa-sm" style="color: #554445;"></i> Wi-fi gratuito<br>
+                                    <i class="fa-solid fa-snowflake fa-sm" style="color: #554445;"></i> Aria condizionata<br>
+                                    <i class="fa-solid fa-vault fa-sm" style="color: #554445;"></i> Cassaforte<br>
+                                    <i class="fa-solid fa-tv fa-sm" style="color: #554445;"></i> Tv a schermo piatto<br>
+                                    <i class="fa-solid fa-martini-glass-citrus" style="color: #554445;"></i> Minibar<br>
+                                    <i class="fa-solid fa-hot-tub-person" style="color: #554445;"></i> Vasca idromassaggio privata <br></p>
+                                </span>
+                                <div class="flex-cont">
+                                <span class="priceCont jacuzzi"> <span id="num4"></span>/notte</span>
+                                <a class="button tiny tjacuzzi" href="">Prenota</a></div>
+                            </div>
+                            <img src="immagini/camera con vasca2.jpg" alt="" height="200em">
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div id="ftcontainer">
+                <div>
+                    <div class="hsm">
+                        <p class="f-logo">HSM</p>
+                        <span>★★★★</span>
+                    </div>
+                    <p>p.iva IT 40722520539</p>
+                    <p>tel 463 369 44</p>
+                    <p>Strada di Tesoro, 2, Radicondoli (SI)</p>
+                    <p>info@hotelsognoinmaremma.it</p>
+                    <p>(data and map are fictional for <u>illustrative</u> purposes only)</p>
+                </div>
+                <div class="subcont">
+                <div class="foot">
+                    <h5>Dove siamo?</h5> <br>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d2116.4872503768825!2d11.03744590934233!3d43.26388518460214!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sit!2sit!4v1700587965645!5m2!1sit!2sit" width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                
+                    <div class="foot">
+                        <h5>Info</h5> <br>
+                        <a href="">Termini e condizioni</a><br>
+                        <a href="">Politica sulla privacy</a><br>
+                        <a href="">Newsletter</a>
+                    </div>
+                    <div class="foot">
+                        <h5>Altro</h5> <br>
+                        <a href="">VIP spa e piscine</a> <br>
+                        <a href="">Menu ristorante</a><br>
+                        <a href="">Escursioni nella Maremma</a><br>
+                        <a href="">Eventi</a>
+                        <div class="social">
+                            <iconify-icon icon="mdi:instagram" width="24" height="24"></iconify-icon> <br>
+                            <iconify-icon icon="ri:facebook-fill" width="24" height="24"></iconify-icon>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p class="cr">© 2023 Hotel Sogno in Maremma. Tutti i diritti riservati.</p>
+            </div>
+        </footer>
+        <script src="script.js" type="text/javascript"></script>
+        <script src="https://kit.fontawesome.com/cc3bfee917.js" crossorigin="anonymous"></script>
+        <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    </body>
+</html>
