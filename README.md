@@ -39,7 +39,8 @@ Project sections
 - **Deploy**: Netlify
 
 - **Fonts**: Courgette, Playfair Display
-- **Palette**: <span style="background-color:#821d1d; color: white">#821d1d</span>, <span style="background-color:#FCFAFA; color: black">#FCFAFA</span>, <span style="background-color:#8C5B26; color: white">#8C5B26</span>, <span style="background-color:#EDDBC0; color: black">#EDDBC0</span>, <span style="background-color:#554445; color: white">#554445</span>
+- **Palette**: <img src='https://github.com/elena563/hotel_sogno_in_maremma/immagini/palette.png' width='50'>
+
 
 ## Contributions
 
