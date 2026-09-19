@@ -47,15 +47,12 @@ export default async function LocaleLayout({ children, params }: Props) {
   const fontClasses: string = `${playfairDisplay.variable} ${cormorantGaramond.variable} ${lora.variable}`;
 
   return (
-    <html
-      lang={locale}
-      className={`${fontClasses} h-full antialiased`}
-    >
+    <html lang={locale} className={`${fontClasses} h-full antialiased`}>
       <body className="min-h-full flex flex-col text-base">
-    <NextIntlClientProvider messages={messages}>
-      {children}
-    </NextIntlClientProvider>
-    </body>
+        <NextIntlClientProvider messages={messages}>
+          {children}
+        </NextIntlClientProvider>
+      </body>
     </html>
   );
 }

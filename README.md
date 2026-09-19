@@ -4,10 +4,11 @@ This is one of my very first little frontend development projects, realized in 2
 
 ## Project Description
 
-This website is designed to provide detailed information about the fictional Hotel Sogno in Maremma, located in the picturesque region of Tuscany, Italy. For this reason the original language is italian. Users can read about various services, explore the four type of rooms proposed and check booking availability. Room, number of people, dates and type of board can be selected and, depending on that, prices are automatically calculated through the site. 
+This website is designed to provide detailed information about the fictional Hotel Sogno in Maremma, located in the picturesque region of Tuscany, Italy. For this reason the original language is italian. Users can read about various services, explore the four type of rooms proposed and check booking availability. Room, number of people, dates and type of board can be selected and, depending on that, prices are automatically calculated through the site.  
 The hotel represented doesn't exist, it's just a project website, every contact or location information is fictional for illustrative purposes only.
 
 Project sections
+
 - Header with responsive navigation menu
 - Homepage: hero section, booking section preview, services list and description
 - Rooms: accomodation and services options with price calculator
@@ -39,16 +40,9 @@ Project sections
 - **Deploy**: Netlify
 
 - **Fonts**: Courgette, Playfair Display
-- **Palette**: <img src='https://github.com/elena563/hotel_sogno_in_maremma/immagini/palette.png' width='50'>
-
 
 ## Contributions
 
 If you want to contribute to the project's improvement, feel free to open an issue or contact me. I will be grateful for every suggestions.
 
 Thank you for your interest in the Hotel Sogno in Maremma project!
-
-
-
-
-
