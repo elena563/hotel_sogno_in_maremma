@@ -36,10 +36,18 @@ Project sections
 
 ## Technologies Used & Design Features
 
-- **Frontend**: HTML, CSS, JavaScript
-- **Deploy**: Netlify
+[![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)  
+[![Shadcn/UI](https://img.shields.io/badge/Shadcn/UI-000000?style=flat&logo=shadcnui&logoColor=white)](https://ui.shadcn.com/)
+[![Figma](https://img.shields.io/badge/Figma-F24E1E?style=flat&logo=figma&logoColor=white)](https://www.figma.com/)  
+[![Drizzle ORM](https://img.shields.io/badge/Drizzle_ORM-000000?style=flat&logo=drizzle&logoColor=white)](https://orm.drizzle.team/) 
+[![Neon](https://img.shields.io/badge/Neon-34D59A?style=flat&logo=neon&logoColor=white)](https://neon.tech/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white)](https://www.postgresql.org/)  
+[![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=white)](https://vercel.com/)  
+[![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=flat&logo=framer&logoColor=white)](https://www.framer.com/motion/)  
 
-- **Fonts**: Courgette, Playfair Display
+Internationalization: next-intl (Italian and English languages available)
 
 ## Contributions
 
