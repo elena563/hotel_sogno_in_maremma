@@ -5,6 +5,7 @@ import { routing } from "@/i18n/routing";
 import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import { Playfair_Display, Cormorant_Garamond, Lora } from "next/font/google";
+import "../globals.css";
 
 const playfairDisplay = Playfair_Display({
   variable: "--font-playfair-display",
