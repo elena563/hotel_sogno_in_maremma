@@ -3,6 +3,7 @@
 import * as React from "react";
 import { format } from "date-fns";
 import { CalendarIcon } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 import type { DateRange } from "react-day-picker";
 
@@ -15,6 +16,7 @@ import {
 } from "@/components/ui/popover";
 
 export function DatePickerRange() {
+  const t = useTranslations("Other");
   const [range, setRange] = React.useState<DateRange>();
 
   return (
@@ -33,7 +35,7 @@ export function DatePickerRange() {
                 format(range.from, "dd MMM yyyy")
               )
             ) : (
-              <span className="text-foreground">Seleziona le date</span>
+              <span className="text-foreground">{t("dates")}</span>
             )}
           </Button>
         }

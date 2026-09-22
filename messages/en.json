@@ -2,5 +2,28 @@
   "Metadata": {
     "title": "Hotel Sogno in Maremma",
     "description": "A boutique hotel in the heart of Maremma, Tuscany, Italy. Experience the perfect blend of comfort, elegance, and authentic Italian hospitality."
+  },
+  "Booking": {
+    "ctaTitle": "Book your stay",
+    "ctaSubtitle": "Choose your dates and book your stay in just a few simple steps.",
+    "ctaButton": "Book now",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Enter your name",
+      "email": "Email",
+      "emailPlaceholder": "Enter your email address",
+      "period": "Period",
+      "board": "Board",
+      "boardPlaceholder": "Select the board",
+      "adults": "Adults",
+      "children": "Children",
+      "terms": "I accept the terms and conditions",
+      "submit": "Book now"
+    }
+  },
+  "Other": {
+    "dates": "Select dates",
+    "loading": "Loading...",
+    "error": "An error occurred. Please try again later."
   }
 }
