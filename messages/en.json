@@ -21,6 +21,17 @@
       "submit": "Book now"
     }
   },
+  "LanguageButton": {
+    "switchToIt": "Switch to Italian",
+    "switchToEn": "Switch to English"
+  },
+  "Nav": {
+    "about": "About",
+    "rooms": "Rooms",
+    "services": "Services",
+    "book": "Book",
+    "contact": "Contact"
+  },
   "Other": {
     "dates": "Select dates",
     "loading": "Loading...",

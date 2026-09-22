@@ -3,10 +3,13 @@ import { Button } from "@/components/ui/button";
 import { Field, FieldGroup, FieldLabel } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import BookingCTA from "@/components/layout/BookingCTA";
+import Logo from "@/components/icons/Logo";
+import Header from "@/components/layout/Header";
 
 export default function Home() {
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-background font-serif">
+    <Header />
       <main className="flex flex-1 w-full flex-col max-w-5xl items-center justify-between py-32 px-16 sm:items-start">
         <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
           <h1 className="text-6xl font-heading font-bold text-foreground">
@@ -26,7 +29,7 @@ export default function Home() {
           <FieldLabel>Informazioni personali</FieldLabel>
           <Input placeholder="Inserisci il tuo nome" />
         </Field>
-    
+        <Logo type="default" width={200} />
         </FieldGroup>
       </main>
     </div>

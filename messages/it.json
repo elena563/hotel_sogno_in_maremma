@@ -21,6 +21,17 @@
       "submit": "Prenota ora"
     }
   },
+  "LanguageButton": {
+    "switchToIt": "Passa a italiano",
+    "switchToEn": "Passa a inglese"
+  },
+  "Nav": {
+    "about": "Chi siamo",
+    "rooms": "Le camere",
+    "services": "I servizi",
+    "book": "Prenota",
+    "contact": "Contatti"
+  },
   "Other": {
     "dates": "Seleziona le date",
     "loading": "Caricamento...",
