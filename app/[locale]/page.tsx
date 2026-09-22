@@ -2,6 +2,16 @@
 import { Button } from "@/components/ui/button";
 import { Field, FieldGroup, FieldLabel } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
+import { Checkbox } from "@/components/ui/checkbox";
+import { DatePickerRange } from "@/components/ui/date-picker";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
 
 export default function Home() {
   return (
@@ -24,14 +34,28 @@ export default function Home() {
           <FieldLabel>Informazioni personali</FieldLabel>
           <Input placeholder="Inserisci il tuo nome" />
         </Field>
+        <Field orientation="horizontal">
+        <Checkbox id="terms-checkbox" name="terms-checkbox" />
+        <FieldLabel htmlFor="terms-checkbox">Accept terms and conditions</FieldLabel>
+      </Field>
         <Field>
           <FieldLabel>Informazioni personali</FieldLabel>
-          <Input type="email" placeholder="Inserisci la tua email" />
+          <DatePickerRange />
         </Field>
-        <Field>
-          <FieldLabel>Informazioni personali</FieldLabel>
-          <Input type="number" placeholder="Adulti" />
-        </Field>
+        <Select>
+      <SelectTrigger className="w-full max-w-48">
+        <SelectValue placeholder="Select a fruit" />
+      </SelectTrigger>
+      <SelectContent>
+        <SelectGroup>
+          <SelectItem value="apple">Apple</SelectItem>
+          <SelectItem value="banana">Banana</SelectItem>
+          <SelectItem value="blueberry">Blueberry</SelectItem>
+          <SelectItem value="grapes">Grapes</SelectItem>
+          <SelectItem value="pineapple">Pineapple</SelectItem>
+        </SelectGroup>
+      </SelectContent>
+    </Select>
         </FieldGroup>
       </main>
     </div>

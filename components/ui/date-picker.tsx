@@ -22,18 +22,18 @@ export function DatePickerRange() {
       <PopoverTrigger
         render={
           <Button
-            variant="outline"
+            variant="secondary"
             className="justify-start text-left font-normal"
           >
             <CalendarIcon />
             {range?.from ? (
               range.to ? (
-                `${format(range.from, "dd MMM yyyy")} – ${format(range.to, "dd MMM yyyy")}`
+                `${format(range.from, "dd MMM yyyy")} - ${format(range.to, "dd MMM yyyy")}`
               ) : (
                 format(range.from, "dd MMM yyyy")
               )
             ) : (
-              <span className="text-muted-foreground">Seleziona le date</span>
+              <span className="text-foreground">Seleziona le date</span>
             )}
           </Button>
         }
