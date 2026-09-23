@@ -30,11 +30,23 @@
     "rooms": "Rooms",
     "services": "Services",
     "book": "Book",
-    "contact": "Contact"
+    "contact": "Contact",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
   },
   "Other": {
     "dates": "Select dates",
     "loading": "Loading...",
     "error": "An error occurred. Please try again later."
+  },
+  "Footer": {
+    "copyright": "All rights reserved - Project by",
+    "whereWeAre": "Where are we?",
+    "info": "Info",
+    "privacy": "Privacy Policy",
+    "vipSpaPools": "VIP spa and pools",
+    "restaurant": "Restaurant",
+    "excursions": "Excursions in Maremma",
+    "disclaimer": "(data and map are fictional for <u>illustrative</u> purposes only)"
   }
 }

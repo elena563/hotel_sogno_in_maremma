@@ -4,9 +4,10 @@ import Link from "next/link";
 type LogoProps = {
   type?: "default" | "short";
   width?: number;
+  className?: string;
 };
 
-export default function Logo({ type = "default", width = 500 }: LogoProps) {
+export default function Logo({ type = "default", width = 500, className }: LogoProps) {
     return (
         <Link href="/" className="flex items-center gap-2">
             <Image
@@ -14,8 +15,8 @@ export default function Logo({ type = "default", width = 500 }: LogoProps) {
                 alt="Hotel Sogno in Maremma Logo"
                 width={540}
                 height={129}
-                style={{ width: `${width}px`, height: "auto" }}
-                className=""
+                style={className ? undefined : { width: `${width}px`, height: "auto" }}
+                className={className ? `${className} h-auto` : ""}
             />
         </Link>
     )

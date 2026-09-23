@@ -30,11 +30,23 @@
     "rooms": "Le camere",
     "services": "I servizi",
     "book": "Prenota",
-    "contact": "Contatti"
+    "contact": "Contatti",
+    "openMenu": "Apri il menu",
+    "closeMenu": "Chiudi il menu"
   },
   "Other": {
     "dates": "Seleziona le date",
     "loading": "Caricamento...",
     "error": "Si è verificato un errore. Riprova più tardi."
+  },
+  "Footer": {
+    "copyright": "Tutti i diritti riservati - Progetto di",
+    "whereWeAre": "Dove siamo?",
+    "info": "Info",
+    "privacy": "Politica sulla privacy",
+    "vipSpaPools": "VIP spa e piscine",
+    "restaurant": "Ristorante",
+    "excursions": "Escursioni nella Maremma",
+    "disclaimer": "(dati e mappa sono fittizi e hanno <u>solo</u> scopo illustrativo)"
   }
 }

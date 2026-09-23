@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import BookingCTA from "@/components/layout/BookingCTA";
 import Logo from "@/components/icons/Logo";
 import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
 export default function Home() {
   return (
@@ -32,6 +33,7 @@ export default function Home() {
         <Logo type="default" width={200} />
         </FieldGroup>
       </main>
+      <Footer />
     </div>
   );
 }
