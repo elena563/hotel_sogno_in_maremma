@@ -1,3 +1,5 @@
+import ImageCarousel from "./ImageCarousel";
+
 export default function RoomDetails({ room, type }) {
     return (
           <div className="flex flex-col md:flex-row gap-2 p-4 bg-surface">
@@ -11,7 +13,9 @@ export default function RoomDetails({ room, type }) {
             )}
             <p className="border-t border-t-secondary mt-2 pt-2">{room.description}</p>
             </div>
-           
+           {type === "gallery" && (
+                <ImageCarousel images={room.images} />
+           )}
         </div>
     );
 }

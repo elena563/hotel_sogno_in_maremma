@@ -51,7 +51,7 @@ export default function RoomsRow({ rooms }) {
                         }`}
                     >
                         <div className="min-h-0 overflow-hidden" aria-hidden={openIndex !== i}>
-                            <RoomDetails room={room} />
+                            <RoomDetails room={room} type="gallery" />
                         </div>
                     </div>
                 </Fragment>
