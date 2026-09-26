@@ -41,7 +41,7 @@ export default function ImageCarousel({
                 alt={image.alt}
                 fill
                 sizes={sizes}
-                priority={index === 0}
+                fetchPriority={index === 0 ? "high" : undefined}
                 className={`object-cover ${image.position || "object-center"}`}
               />
             </div>

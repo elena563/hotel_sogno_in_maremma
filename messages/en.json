@@ -69,8 +69,9 @@
     }
   },
   "About": {
-    "title": "About Us",
-    "description": "Learn more about our boutique hotel and the unique experiences we offer in the heart of Maremma.",
+    "headline": "A story of hospitality,\n from 30 years nourished by Maremma",
+    "intro": "Discover our story",
+    "text": "Founded in 1987 by a farming family from Siena, Hotel Sogno in Maremma was born from a desire to share the quiet beauty of this land with the world. What was once a country farmhouse surrounded by vineyards and olive groves has evolved over the years into a charming retreat where the spirit of Tuscan tradition permeates every corner. \n\nFollowing a renovation completed in 2010, the hotel successfully reinvented itself without losing its soul: original wooden beams, exposed stonework, and terracotta floors now blend seamlessly with refined interiors and modern amenities. Four generations of hospitality, one single promise: to make you feel at home, a home that captures the true essence of Maremma.",
     "services": "Services dedicated to you"
   },
   "Slides": [
@@ -95,6 +96,11 @@
       "caption": "Rent a bicycle and set out to discover the trails and breathtaking landscapes of Maremma."
     }
   ],
+  "Rooms": {
+    "headline": "Hospitality\n above\n all",
+    "intro": "Choose your comfort",
+    "text": "Discover our elegant and comfortable rooms, designed to offer you an unforgettable stay."
+  },
   "Other": {
     "dates": "Select dates",
     "loading": "Loading...",

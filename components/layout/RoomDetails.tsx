@@ -31,6 +31,7 @@ export default function RoomDetails({ room, type }: RoomDetailsProps) {
         <ImageCarousel
           images={room.images}
           className="max-w-[12rem] sm:max-w-xs"
+          sizes="(min-width: 640px) 320px, 192px"
         />
       )}
     </div>

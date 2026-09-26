@@ -69,8 +69,9 @@
     }
   },
   "About": {
-    "title": "Chi siamo",
-    "description": "Scopri di più sul nostro boutique hotel e sulle esperienze uniche che offriamo nel cuore della Maremma.",
+    "headline": "Una storia di ospitalità,\n da 30 anni nutriti dalla Maremma",
+    "intro": "Scopri la nostra storia",
+    "text": "Fondato nel 1987 da una famiglia di agricoltori senesi, l'Hotel Sogno in Maremma nasce dalla volontà di condividere con il mondo la bellezza silenziosa di questa terra. Quello che era un casale di campagna circondato da vigne e ulivi è diventato, nel corso degli anni, un rifugio di charme dove la tradizione toscana si respira in ogni angolo.\n\nDopo una ristrutturazione completata nel 2010, l'hotel ha saputo reinventarsi senza perdere la propria anima: le travi in legno originali, le pietre a vista e i pavimenti in cotto convivono oggi con interni curati e servizi moderni. Quattro generazioni di ospitalità, una sola promessa: farti sentire a casa, dove casa sa di Maremma.",
     "services": "Servizi dedicati a te"
   },
   "Slides": [
@@ -95,6 +96,11 @@
       "caption": "Noleggia una bicicletta e parti alla scoperta dei sentieri e dei paesaggi mozzafiato della Maremma."
     }
   ],
+  "Rooms": {
+    "headline": "L'accoglienza\n prima\n di tutto",
+    "intro": "Scegli il tuo comfort",
+    "text": "Scopri le nostre camere eleganti e confortevoli, progettate per offrirti un soggiorno indimenticabile."
+  },
   "Other": {
     "dates": "Seleziona le date",
     "loading": "Caricamento...",

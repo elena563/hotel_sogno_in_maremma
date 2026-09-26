@@ -60,7 +60,7 @@ export default function Header() {
           <Link href="/about" className="hover:underline">
             {t("about")}
           </Link>
-          <Link href="/about" className="hover:underline">
+          <Link href="/rooms" className="hover:underline">
             {t("rooms")}
           </Link>
           <Link href="/about" className="hover:underline">

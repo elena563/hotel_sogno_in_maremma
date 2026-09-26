@@ -4,11 +4,9 @@ import { Star, WavesHorizontal, Bed, Users } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import BookingCTA from "@/components/layout/BookingCTA";
-import RoomsRow from "@/components/layout/RoomsRow";
 import ServicePreviewCard from "@/components/layout/ServicePreviewCard";
 import ImageCarousel from "@/components/layout/ImageCarousel";
 
-import { rooms } from "@/lib/data/rooms";
 import { services } from "@/lib/data/services";
 
 const carouselImages = [
@@ -120,8 +118,7 @@ export default function Home() {
             ))}
           </div>
         </section>
-        <RoomsRow rooms={rooms} />
-        <BookingCTA type="form" />
+        <BookingCTA type="default" />
       </main>
     </div>
   );
