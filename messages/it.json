@@ -34,10 +34,42 @@
     "openMenu": "Apri il menu",
     "closeMenu": "Chiudi il menu"
   },
+  "Services": {
+    "title": "Servizi",
+    "description": "Scopri la gamma di servizi che offriamo per rendere il tuo soggiorno indimenticabile."
+  },
+  "About": {
+    "title": "Chi siamo",
+    "description": "Scopri di più sul nostro boutique hotel e sulle esperienze uniche che offriamo nel cuore della Maremma.",
+    "services": "Servizi dedicati a te"
+  },
+  "Slides": [
+    {
+      "title": "La piscina panoramica",
+      "caption": "Rilassati nella nostra piscina panoramica con vista mozzafiato sulla campagna toscana."
+    },
+    {
+      "title": "Tramonti indimenticabili",
+      "caption": "Goditi i tramonti spettacolari dalla terrazza del nostro hotel, un'esperienza da non perdere."
+    },
+    {
+      "title": "Colazione con vista",
+      "caption": "Inizia la tua giornata con una colazione deliziosa e genuina, ammirando la bellezza della Maremma."
+    },
+    {
+      "title": "Incontri con la fauna locale",
+      "caption": "Scopri la fauna locale durante le tue passeggiate nella natura incontaminata della Maremma."
+    },
+    {
+      "title": "Esplora in bicicletta",
+      "caption": "Noleggia una bicicletta e parti alla scoperta dei sentieri e dei paesaggi mozzafiato della Maremma."
+    }
+  ],
   "Other": {
     "dates": "Seleziona le date",
     "loading": "Caricamento...",
-    "error": "Si è verificato un errore. Riprova più tardi."
+    "error": "Si è verificato un errore. Riprova più tardi.",
+    "discover": "Scopri di più →"
   },
   "Footer": {
     "copyright": "Tutti i diritti riservati - Progetto di",

@@ -34,10 +34,42 @@
     "openMenu": "Open menu",
     "closeMenu": "Close menu"
   },
+  "Services": {
+    "title": "Services",
+    "description": "Discover the range of services we offer to make your stay unforgettable."
+  },
+  "About": {
+    "title": "About Us",
+    "description": "Learn more about our boutique hotel and the unique experiences we offer in the heart of Maremma.",
+    "services": "Services dedicated to you"
+  },
+  "Slides": [
+    {
+      "title": "The panoramic pool",
+      "caption": "Relax in our panoramic pool with a breathtaking view of the Tuscan countryside."
+    },
+    {
+      "title": "Unforgettable sunsets",
+      "caption": "Enjoy the spectacular sunsets from the terrace of our hotel, an experience you won't want to miss."
+    },
+    {
+      "title": "Breakfast with a view",
+      "caption": "Start your day with a delicious and authentic breakfast, admiring the beauty of Maremma."
+    },
+    {
+      "title": "Encounters with local wildlife",
+      "caption": "Discover the local wildlife during your walks in the pristine nature of Maremma."
+    },
+    {
+      "title": "Explore by bicycle",
+      "caption": "Rent a bicycle and set out to discover the trails and breathtaking landscapes of Maremma."
+    }
+  ],
   "Other": {
     "dates": "Select dates",
     "loading": "Loading...",
-    "error": "An error occurred. Please try again later."
+    "error": "An error occurred. Please try again later.",
+    "discover": "Discover more →"
   },
   "Footer": {
     "copyright": "All rights reserved - Project by",

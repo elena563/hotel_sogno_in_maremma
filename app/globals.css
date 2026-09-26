@@ -92,6 +92,8 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 }
 
+@source inline("h-48 h-64 h-80 h-96");
+
 html {
   scroll-behavior: smooth;
   box-sizing: border-box;
@@ -99,6 +101,7 @@ html {
 
 body {
   font-family: var(--font-lora), Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
 .dark {
