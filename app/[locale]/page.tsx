@@ -47,19 +47,26 @@ export default function Home() {
 
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-background font-serif">
-      <main className="flex flex-1 w-full flex-col max-w-6xl items-center justify-between py-32 sm:items-start">
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="text-6xl font-heading font-bold text-foreground">
-            NATURA, RELAX E COMFORT
-          </h1>
+    <section className="relative h-[80vh]">
+      <Image
+        src="/images/hero-home.webp"
+        alt="Hotel Sogno in Maremma"
+        fill
+        priority
+        className="object-cover object-center"
+      />
+      <div className="absolute bottom-0 left-0 p-6 m-6 bg-foreground/50 z-10 flex flex-col gap-6 items-start justify-end md:max-w-xl text-surface">
+        <h1 className="text-6xl font-heading font-bold">
+          {t("Home.headline")}
+        </h1>
+        <p>{t("Home.subheadline")}</p>
+        <div className="flex flex-col gap-4 sm:flex-row">
+          <Button>{t("Home.book")}</Button>
+          <Button variant="outline_secondary">{t("Other.discover")}</Button>
         </div>
-         <div className="flex flex-col gap-4 sm:flex-row">
-          <Button>Prenota</Button>
-          <Button variant="outline">Scopri di più</Button>
-        </div>
-        <div className="flex flex-col gap-4 sm:flex-row bg-secondary-dark p-6">
-          <Button variant="outline_secondary">Scopri di più</Button>
-        </div>
+      </div>
+    </section>
+      <main className="flex flex-1 w-full flex-col max-w-6xl items-center justify-between pb-16 pt-8 sm:items-start">
         <section>
           <div className="w-full flex flex-wrap justify-around gap-4 py-6">
           {Object.entries(icons).map(([key, Icon], index) => (

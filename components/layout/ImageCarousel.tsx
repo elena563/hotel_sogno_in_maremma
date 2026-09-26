@@ -20,6 +20,7 @@ interface ImageCarouselProps {
   className?: string;
   showCaptions?: boolean;
   imageHeight?: number;
+  sizes?: string;
 }
 
 export default function ImageCarousel({
@@ -27,19 +28,23 @@ export default function ImageCarousel({
   className,
   showCaptions,
   imageHeight,
+  sizes = "100vw",
 }: ImageCarouselProps) {
   return (
     <Carousel className={`w-full ${className}`}>
       <CarouselContent>
         {images.map((image, index) => (
           <CarouselItem key={index}>
-            <Image
-              src={image.src}
-              alt={image.alt}
-              width={400}
-              height={300}
-              className={`object-cover w-full h-${imageHeight || 48} ${image.position || "object-center"}`}
-            />
+            <div className={`relative w-full h-${imageHeight || 48}`}>
+              <Image
+                src={image.src}
+                alt={image.alt}
+                fill
+                sizes={sizes}
+                priority={index === 0}
+                className={`object-cover ${image.position || "object-center"}`}
+              />
+            </div>
             {showCaptions && (
               <div className="w-full absolute bottom-4 text-surface p-4 ml-2 bg-foreground/30">
                 <h3 className="text-xl">{image.title}</h3>
