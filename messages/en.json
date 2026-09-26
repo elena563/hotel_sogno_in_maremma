@@ -34,9 +34,37 @@
     "openMenu": "Open menu",
     "closeMenu": "Close menu"
   },
+  "Home": {
+    "intro": "Time for you, finally",
+    "text": "The Dream of Maremma awaits you in the heart of Tuscany, between golden hills, the scents of Mediterranean maquis and sunsets that dye the sky with burgundy. Every stay is an experience that you take with you: carefully designed rooms, a rejuvenating spa, a kitchen that celebrates the territory. A place to really stop.",
+    "book": "Book now",
+    "reviews": "What they say about us",
+    "icons": {
+      "star": "5 stars",
+      "waves": "2 pools",
+      "bed": "12 rooms",
+      "users": "Since 1998"
+    }
+  },
   "Services": {
     "title": "Services",
-    "description": "Discover the range of services we offer to make your stay unforgettable."
+    "description": "Discover the range of services we offer to make your stay unforgettable.",
+    "pool": {
+      "title": "Pools",
+      "description": "Relax in our pools and enjoy the refreshing water in a serene environment."
+    },
+    "spa": {
+      "title": "The spa",
+      "description": "In our wellness retreat, you can rejuvenate your mind and body with a range of treatments and therapies."
+    },
+    "restaurant": {
+      "title": "The restaurant",
+      "description": "Savor the flavors of Tuscany with our exquisite cuisine, prepared with fresh and locally sourced ingredients."
+    },
+    "bike": {
+      "title": "The bike rental",
+      "description": "Explore the Maremma on a bicycle and discover its breathtaking landscapes."
+    }
   },
   "About": {
     "title": "About Us",

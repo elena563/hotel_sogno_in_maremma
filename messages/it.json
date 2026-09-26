@@ -34,9 +34,37 @@
     "openMenu": "Apri il menu",
     "closeMenu": "Chiudi il menu"
   },
+  "Home": {
+    "intro": "Tempo per te, finalmente",
+    "text": "Il Sogno di Maremma ti aspetta nel cuore della Toscana, tra colline dorate, profumi di macchia mediterranea e tramonti che tingono il cielo di borgogna. Ogni soggiorno è un'esperienza che si porta con sé: camere curate, una spa rigenerante, una cucina che celebra il territorio. Un posto dove fermarsi davvero.",
+    "book": "Prenota ora",
+    "reviews": "Cosa dicono di noi",
+    "icons": {
+      "star": "5 stelle",
+      "waves": "2 piscine",
+      "bed": "12 camere",
+      "users": "Dal 1998"
+    }
+  },
   "Services": {
     "title": "Servizi",
-    "description": "Scopri la gamma di servizi che offriamo per rendere il tuo soggiorno indimenticabile."
+    "description": "Scopri la gamma di servizi che offriamo per rendere il tuo soggiorno indimenticabile.",
+    "pool": {
+      "title": "Le piscine",
+      "description": "Vivrai il piacere dell'acqua in un ambiente rilassante e rigenerante."
+    },
+    "spa": {
+      "title": "La spa",
+      "description": "Nel nostro rifugio di benessere, potrai rigenerare mente e corpo."
+    },
+    "restaurant": {
+      "title": "Il ristorante",
+      "description": "Assapora i piatti della tradizione toscana preparati con ingredienti freschi e locali."
+    },
+    "bike": {
+      "title": "Il noleggio bici",
+      "description": "Esplora la Maremma in bicicletta e scopri i suoi paesaggi mozzafiato."
+    }
   },
   "About": {
     "title": "Chi siamo",
