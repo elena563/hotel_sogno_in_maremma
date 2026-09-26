@@ -7,6 +7,9 @@ import type { Metadata } from "next";
 import { Playfair_Display, Cormorant_Garamond, Lora } from "next/font/google";
 import "../globals.css";
 
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+
 const playfairDisplay = Playfair_Display({
   variable: "--font-playfair-display",
   subsets: ["latin"],
@@ -51,7 +54,9 @@ export default async function LocaleLayout({ children, params }: Props) {
     <html lang={locale} className={`${fontClasses} h-full antialiased`}>
       <body className="min-h-full flex flex-col text-base">
         <NextIntlClientProvider messages={messages}>
+          <Header />
           {children}
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>

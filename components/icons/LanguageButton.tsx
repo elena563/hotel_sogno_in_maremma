@@ -44,7 +44,11 @@ export default function LanguageButton() {
       aria-label={nextLocale === "it" ? t("switchToIt") : t("switchToEn")}
       className="flex items-center border-0 outline-none justify-center overflow-hidden cursor-pointer transition-opacity focus-visible:opacity-70"
     >
-      {locale === "it" ? <UKFlag className="h-auto w-12" /> : <ITFlag className="h-auto w-12" />}
+      {locale === "it" ? (
+        <UKFlag className="h-auto w-12" />
+      ) : (
+        <ITFlag className="h-auto w-12" />
+      )}
     </button>
   );
 }

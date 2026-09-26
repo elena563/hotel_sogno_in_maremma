@@ -11,7 +11,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select"
+} from "@/components/ui/select";
 
 export default function BookingForm() {
   const t = useTranslations("Booking.form");
@@ -28,12 +28,12 @@ export default function BookingForm() {
           <Input type="email" placeholder={t("emailPlaceholder")} />
         </Field>
       </FieldGroup>
-    <FieldGroup className="flex-1 md:flex-row items-end">
+      <FieldGroup className="flex-1 md:flex-row items-end">
         <Field>
           <FieldLabel>{t("period")}</FieldLabel>
           <DatePickerRange />
         </Field>
-      <Field>
+        <Field>
           <FieldLabel>{t("board")}</FieldLabel>
           <Select>
             <SelectTrigger className="w-full">
@@ -55,15 +55,15 @@ export default function BookingForm() {
         <Field>
           <FieldLabel>{t("children")}</FieldLabel>
           <Input type="number" />
-        </Field>  
-    </FieldGroup>
-     <Field orientation="horizontal">
+        </Field>
+      </FieldGroup>
+      <Field orientation="horizontal">
         <Checkbox id="terms-checkbox" name="terms-checkbox" />
         <FieldLabel htmlFor="terms-checkbox">{t("terms")}</FieldLabel>
-        </Field>
-    <Button type="submit" variant="default" className="w-full max-w-48">
+      </Field>
+      <Button type="submit" variant="default" className="w-full max-w-48">
         {t("submit")}
-    </Button>
+      </Button>
     </form>
   );
 }
