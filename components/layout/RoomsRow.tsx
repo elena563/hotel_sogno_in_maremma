@@ -48,7 +48,7 @@ export default function RoomsRow({ rooms }: { rooms: Room[] }) {
             <RoomCard room={room} />
           </button>
           <div
-            className={`col-span-2 grid overflow-hidden transition-[grid-template-rows,opacity] duration-500 ease-in-out ${
+            className={`md:col-span-2 grid overflow-hidden transition-[grid-template-rows,opacity] duration-500 ease-in-out ${
               openIndex === i
                 ? "[grid-template-rows:1fr] opacity-100"
                 : "[grid-template-rows:0fr] opacity-0"

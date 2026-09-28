@@ -4,7 +4,7 @@ import { Room } from "@/lib/data/rooms";
 
 export default function RoomCard({ room }: { room: Room }) {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col mt-4">
       <div className="relative w-full h-64 md:h-56">
         <Image
           src={room.header_image}

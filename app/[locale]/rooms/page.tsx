@@ -19,7 +19,7 @@ export default function RoomsPage() {
                 className="object-cover object-center"
             />
             <div className="absolute top-1/4 left-0 p-6 m-6 z-10 flex flex-col gap-6 items-start justify-end md:max-w-lg">
-                <h1 className="text-5xl font-heading font-bold whitespace-pre-line leading-snug">
+                <h1 className="text-5xl font-heading font-bold whitespace-pre-line leading-snug p-4 bg-surface/40 md:bg-transparent">
                 {t("Rooms.headline")}
                 </h1>
             </div>

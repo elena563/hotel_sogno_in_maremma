@@ -66,11 +66,11 @@ export default function Home() {
     </section>
       <main className="flex flex-1 w-full flex-col max-w-6xl items-center justify-between pb-16 pt-8 sm:items-start">
         <section>
-          <div className="w-full flex flex-wrap justify-around gap-4 py-6">
+          <div className="w-full grid grid-cols-2 md:grid-cols-4 justify-evenly gap-10 py-6">
           {Object.entries(icons).map(([key, Icon], index) => (
             <div key={index} className="flex flex-col items-center gap-2">
               <Icon className="w-10 h-10 text-secondary" />
-              <span className="text-3xl font-heading text-secondary">
+              <span className="text-2xl md:text-3xl font-heading text-secondary">
                 {t(`Home.icons.${key}`)}
               </span>
             </div>

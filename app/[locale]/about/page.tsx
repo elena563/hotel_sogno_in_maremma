@@ -16,15 +16,15 @@ export default function AboutPage() {
                 priority
                 className="object-cover object-center"
             />
-            <div className="absolute top-1/3 left-0 p-6 m-6 z-10 flex flex-col gap-6 items-start justify-end md:max-w-full text-surface">
-                <h1 className="text-5xl font-heading font-bold whitespace-pre-line leading-snug text-shadow-lg"
-                style={{ filter: "drop-shadow(0 0 20px rgba(0,0,0,1)) drop-shadow(0 0 40px rgba(0,0,0,1)) drop-shadow(0 0 80px rgba(0,0,0,1)) drop-shadow(0 0 120px rgba(0,0,0,1))" }}>
+            <div className="absolute bottom-12 md:top-1/3 left-0 md:p-6 m-6 z-10 flex flex-col gap-6 items-start justify-end md:max-w-full text-surface">
+                <h1 className="text-4xl md:text-5xl font-heading font-bold whitespace-pre-line leading-snug text-shadow-lg"
+                style={{ filter: "drop-shadow(0 0 20px rgba(0,0,0,1)) drop-shadow(0 0 40px rgba(0,0,0,1)) drop-shadow(0 0 40px rgba(0,0,0,1)) drop-shadow(0 0 40px rgba(0,0,0,1))" }}>
                 {t("About.headline")}
                 </h1>
             </div>
             </section>
             <div className="relative w-full min-h-[300px] overflow-hidden">
-                <div className="absolute bottom-0 left-1/2 w-[170%] sm:w-[150%] lg:w-[120%] -translate-x-1/2">
+                <div className="absolute bottom-0 left-1/2 w-[270%] sm:w-[150%] lg:w-[120%] -translate-x-1/2">
                     <Image
                         src="/images/hill.svg"
                         alt=""
@@ -36,8 +36,8 @@ export default function AboutPage() {
                     />
                 </div>
                 
-                <div className="relative z-10 w-full flex flex-col md:flex-row items-center justify-center gap-8 px-6 py-10">
-                    <div className="flex flex-col items-start gap-6 px-6 py-10">
+                <div className="relative z-10 w-full flex flex-col-reverse md:flex-row items-center justify-center md:gap-8 py-16 md:px-6">
+                    <div className="flex flex-col items-start gap-6 px-6">
                         <h2 className="text-3xl font-semibold font-heading text-secondary">
                         {t("About.intro")}
                         </h2>

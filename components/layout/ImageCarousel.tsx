@@ -46,7 +46,7 @@ export default function ImageCarousel({
               />
             </div>
             {showCaptions && (
-              <div className="w-full absolute bottom-4 text-surface p-4 ml-2 bg-foreground/30">
+              <div className="w-[95vw] absolute bottom-4 text-surface p-4 mx-2 mt-4 bg-foreground/30">
                 <h3 className="text-xl">{image.title}</h3>
                 <p>{image.caption}</p>
               </div>
