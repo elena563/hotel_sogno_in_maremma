@@ -113,6 +113,30 @@
     "error": "An error occurred. Please try again later.",
     "discover": "Discover more →"
   },
+  "Privacy": {
+    "headline": "Privacy information notice",
+    "project": {
+      "title": "An educational project",
+      "text": "This site is a personal, educational project. Hotel Sogno in Maremma does not exist: the property, the services, the prices and the contact details are fictional and serve illustrative purposes only."
+    },
+    "images": {
+      "title": "Images and content",
+      "text": "The images used on this site come from two sources: some were downloaded online from freely usable image sites, others were generated with artificial intelligence tools. They are not available under commercial licences."
+    },
+    "cookies": {
+      "title": "Cookies",
+      "text": "This site does not use cookies, tracking tools or profiling services. No consent is therefore required and no banner is shown."
+    },
+    "bookings": {
+      "title": "Booking data",
+      "text": "The data entered in the booking form (name, email address, stay dates and party size) is stored temporarily for the sole purpose of being displayed in the admin area. It is kept for a maximum of 30 days from the request and is then automatically deleted. It is not shared with third parties nor used for marketing purposes."
+    },
+    "advice": {
+      "title": "A suggestion",
+      "text": "Since this is an educational project, please use dummy data. Enter a made-up name and a non-existent email address, and do not share any real personal information."
+    },
+    "updated": "Last updated: September 2026"
+  },
   "Footer": {
     "copyright": "All rights reserved - Project by",
     "whereWeAre": "Where are we?",

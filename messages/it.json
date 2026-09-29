@@ -118,6 +118,30 @@
     "discover": "Scopri di più →",
     "rooms": "Scopri le camere"
   },
+  "Privacy": {
+    "headline": "Informativa sul trattamento dei dati personali",
+    "project": {
+      "title": "Un progetto didattico",
+      "text": "Questo sito è un progetto personale e didattico. L'Hotel Sogno in Maremma non esiste: la struttura, i servizi, i prezzi e i riferimenti di contatto sono inventati e hanno il solo scopo di illustrare il progetto."
+    },
+    "images": {
+      "title": "Immagini e contenuti",
+      "text": "Le immagini utilizzate nel sito provengono da due fonti: alcune sono state scaricate online da siti di immagini liberamente utilizzabili, altre sono state generate con strumenti di intelligenza artificiale. Non sono disponibili con licenze commerciali."
+    },
+    "cookies": {
+      "title": "Cookie",
+      "text": "Questo sito non utilizza cookie, strumenti di tracciamento o servizi di profilazione. Non viene quindi richiesto alcun consenso e non viene mostrato alcun banner."
+    },
+    "bookings": {
+      "title": "Dati delle prenotazioni",
+      "text": "I dati inseriti nel modulo di prenotazione (nome, indirizzo email, periodo e composizione del soggiorno) vengono memorizzati temporaneamente al solo scopo di poter essere visualizzati nell'area amministrativa. Sono conservati per un massimo di 30 giorni dalla richiesta e poi cancellati automaticamente. Non vengono ceduti a terzi né utilizzati per finalità di marketing."
+    },
+    "advice": {
+      "title": "Un consiglio",
+      "text": "Poiché si tratta di un progetto didattico, ti chiediamo di usare dati fittizi. Inserisci un nome di fantasia e un indirizzo email inesistente, e non condividere informazioni personali reali."
+    },
+    "updated": "Ultimo aggiornamento: settembre 2026"
+  },
   "Footer": {
     "copyright": "Tutti i diritti riservati - Progetto di",
     "whereWeAre": "Dove siamo?",
