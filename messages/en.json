@@ -51,21 +51,27 @@
   "Services": {
     "title": "Services",
     "description": "Discover the range of services we offer to make your stay unforgettable.",
+    "headline": "Services tailored to You",
+    "text": "From the panoramic pool to the rejuvenating spa, from the restaurant that celebrates the flavors of Maremma to the bike rental for exploring the surrounding nature, every service is thought out to give you a unique and unforgettable experience.",
     "pool": {
       "title": "Pools",
-      "description": "Relax in our pools and enjoy the refreshing water in a serene environment."
+      "description": "Relax in our pools and enjoy the refreshing water in a serene environment.",
+      "text": "Our two pools offer moments of relaxation in every season: the indoor pool is open all year round from 8:00 am to 8:00 pm, while the panoramic outdoor pool is available from May to September during the same hours.\n\n Access is included with your stay and includes sun loungers, umbrellas and towels for guests.\n We recommend reserving a lounger at reception, especially in July and August; the indoor pool is also ideal for a wellness break on cooler days."
     },
     "spa": {
       "title": "The spa",
-      "description": "In our wellness retreat, you can rejuvenate your mind and body with a range of treatments and therapies."
+      "description": "In our wellness retreat, you can rejuvenate your mind and body with a range of treatments and therapies.",
+      "text": "The spa is open from 9:00 am to 7:00 pm and offers relaxing massages, facial treatments and a wellness circuit with sauna, steam room and herbal tea area.\n\n Treatments last 50 or 80 minutes, with prices starting at €70; the spa circuit costs €35 per person for two hours. Booking is required and can be made at reception at arrival or later.\n To ensure a peaceful experience, access is arranged in time slots and bathrobes are included."
     },
     "restaurant": {
       "title": "The restaurant",
-      "description": "Savor the flavors of Tuscany with our exquisite cuisine, prepared with fresh and locally sourced ingredients."
+      "description": "Savor the flavors of Tuscany with our exquisite cuisine, prepared with fresh and locally sourced ingredients.",
+      "text": "The restaurant is open for lunch from 12:30 pm to 2:00 pm and dinner from 7:30 pm to 10:00 pm, with a seasonal menu designed for full board stays.\n\n Every day it offers homemade pasta, local meats, the catch of the day and vegetarian options; the four-course tasting menu costs €55 per person, while à la carte first courses start at €18. Pairings of Maremma wines are available from €25.\n For lunch and dinner, guests are advised to reserve a table at reception and report any allergies or dietary requirements by 10:00 am."
     },
     "bike": {
       "title": "The bike rental",
-      "description": "Explore the Maremma on a bicycle and discover its breathtaking landscapes."
+      "description": "Explore the Maremma on a bicycle and discover its breathtaking landscapes.",
+      "text": "Discover the most beautiful routes in Maremma by bicycle and enjoy the unspoilt nature of this land. Rent one of our bicycles and set off on an adventure through country roads, vineyards and historic villages! Every rental includes a helmet, lock and a map with recommended routes.\n\nCost: €15 for half a day, €25 for a full day. Bicycles can be collected and returned at reception; to guarantee availability, we recommend booking the day before.\n For information, customised routes and bookings, please contact us directly at the hotel."
     }
   },
   "About": {

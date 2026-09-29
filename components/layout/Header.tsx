@@ -11,7 +11,7 @@ const navItems = [
   { href: "/about", key: "rooms" },
   { href: "/about", key: "services" },
   { href: "/about", key: "book" },
-  { href: "/contact", key: "contact" },
+  { href: "#footer", key: "contact" },
 ];
 
 export default function Header() {
@@ -63,13 +63,13 @@ export default function Header() {
           <Link href="/rooms" className="hover:underline">
             {t("rooms")}
           </Link>
-          <Link href="/about" className="hover:underline">
+          <Link href="/about#services" className="hover:underline">
             {t("services")}
           </Link>
-          <Link href="/about" className="hover:underline">
+          <Link href="/rooms#book" className="hover:underline">
             {t("book")}
           </Link>
-          <Link href="/contact" className="hover:underline">
+          <Link href="#footer" className="hover:underline">
             {t("contact")}
           </Link>
           <LanguageButton />

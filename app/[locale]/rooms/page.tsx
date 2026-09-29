@@ -34,6 +34,7 @@ export default function RoomsPage() {
                     </p>
                     <RoomsRow rooms={rooms} />
                 </div>
+                <span id="book"></span>
                 <BookingCTA type="form" />
             </main>
       </div>

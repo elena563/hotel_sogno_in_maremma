@@ -1,8 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { Star, WavesHorizontal, Bed, Users } from "lucide-react";
 
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import BookingCTA from "@/components/layout/BookingCTA";
 import ServicePreviewCard from "@/components/layout/ServicePreviewCard";
 import ImageCarousel from "@/components/layout/ImageCarousel";
@@ -59,8 +60,12 @@ export default function Home() {
         </h1>
         <p>{t("Home.subheadline")}</p>
         <div className="flex flex-col gap-4 sm:flex-row">
-          <Button>{t("Home.book")}</Button>
-          <Button variant="outline_secondary">{t("Other.discover")}</Button>
+          <Link href="/rooms#book" className={buttonVariants({ variant: "default" })}>
+              {t("Home.book")}
+          </Link>
+          <Link href="/about" className={buttonVariants({ variant: "outline_secondary" })}>
+              {t("Other.discover")}
+          </Link>
         </div>
       </div>
     </section>
@@ -83,7 +88,9 @@ export default function Home() {
             <p className="text-left sm:text-center">
               {t("Home.text")}
             </p>
-            <Button variant="outline">{t("Home.book")}</Button>
+            <Link href="/rooms#book" className={buttonVariants({ variant: "outline" })}>
+              {t("Home.book")}
+            </Link>
           </div>
         </section>
         <div className="relative left-1/2 -translate-x-1/2 w-dvw">

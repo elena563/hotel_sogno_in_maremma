@@ -51,21 +51,31 @@
   "Services": {
     "title": "Servizi",
     "description": "Scopri la gamma di servizi che offriamo per rendere il tuo soggiorno indimenticabile.",
+    "headline": "I servizi dedicati a Te",
+    "text": "Dalla piscina panoramica alla spa rigenerante, dal ristorante che celebra i sapori della Maremma al noleggio bici per esplorare la natura circostante, ogni servizio è pensato per offrirti un'esperienza unica e indimenticabile.",
     "pool": {
       "title": "Le piscine",
-      "description": "Vivrai il piacere dell'acqua in un ambiente rilassante e rigenerante."
+      "headline": "Un bagno di relax e bellezza",
+      "description": "Vivrai il piacere dell'acqua in un ambiente rilassante e rigenerante.",
+      "text": "Le nostre due piscine offrono momenti di relax in ogni stagione: la piscina interna è aperta tutto l'anno dalle 8:00 alle 20:00, mentre la piscina esterna panoramica è disponibile da maggio a settembre negli stessi orari.\n\n L'accesso è incluso nel soggiorno e comprende lettini, ombrelloni e teli per gli ospiti.\n Per una maggiore tranquillità consigliamo di prenotare il lettino presso la reception, soprattutto nei mesi di luglio e agosto; la piscina interna è ideale anche per una pausa benessere nelle giornate più fresche."
     },
     "spa": {
       "title": "La spa",
-      "description": "Nel nostro rifugio di benessere, potrai rigenerare mente e corpo."
+      "headline": "Rigenera mente e corpo",
+      "description": "Nel nostro rifugio di benessere, potrai rigenerare mente e corpo.",
+      "text": "La spa è aperta dalle 9:00 alle 19:00 e propone massaggi rilassanti, trattamenti viso e un percorso benessere con sauna, bagno turco e area tisane.\n\n I trattamenti durano 50 o 80 minuti, con prezzi a partire da 70€; il percorso spa costa 35€ a persona per due ore. La prenotazione è richiesta e può essere effettuata in reception all'arrivo o successivamente.\n Per garantire un'esperienza tranquilla, gli ingressi sono organizzati in fasce orarie e gli accappatoi sono inclusi."
     },
     "restaurant": {
       "title": "Il ristorante",
-      "description": "Assapora i piatti della tradizione toscana preparati con ingredienti freschi e locali."
+      "headline": "Sapori autentici della Maremma",
+      "description": "Assapora i piatti della tradizione toscana preparati con ingredienti freschi e locali.",
+      "text": "Il ristorante è aperto a pranzo dalle 12:30 alle 14:00 e a cena dalle 19:30 alle 22:00, con un menu stagionale pensato per la pensione completa.\n\n Ogni giorno propone pasta fatta in casa, carni locali, pescato del giorno e opzioni vegetariane; il menu degustazione di quattro portate costa 55€ a persona, mentre il menu à la carte parte da 18€ per i primi piatti. Gli abbinamenti di vini maremmani sono disponibili da 25€.\n Per il pranzo e la cena è consigliato prenotare il tavolo in reception, indicando eventuali allergie o esigenze alimentari entro le 10:00."
     },
     "bike": {
       "title": "Il noleggio bici",
-      "description": "Esplora la Maremma in bicicletta e scopri i suoi paesaggi mozzafiato."
+      "headline": "Esplora la Maremma in bicicletta",
+      "description": "Esplora la Maremma in bicicletta e scopri i suoi paesaggi mozzafiato.",
+      "text": "Scopri i percorsi più belli della Maremma in bicicletta e goditi la natura incontaminata di questa terra. Noleggia una delle nostre biciclette e parti all'avventura tra strade di campagna, vigneti e borghi storici! Ogni noleggio include casco, lucchetto e una mappa con gli itinerari consigliati.\n\nCosto: 15€ per mezza giornata, 25€ per l'intera giornata. Le biciclette si ritirano e si riconsegnano presso la reception; per garantirne la disponibilità, ti consigliamo di prenotarle il giorno prima.\n Per informazioni, percorsi personalizzati e prenotazioni, contattaci direttamente in hotel."
     }
   },
   "About": {
@@ -105,7 +115,8 @@
     "dates": "Seleziona le date",
     "loading": "Caricamento...",
     "error": "Si è verificato un errore. Riprova più tardi.",
-    "discover": "Scopri di più →"
+    "discover": "Scopri di più →",
+    "rooms": "Scopri le camere"
   },
   "Footer": {
     "copyright": "Tutti i diritti riservati - Progetto di",

@@ -1,6 +1,7 @@
 export interface Service {
   id: string;
   image: string;
+  imgPosition?: string;
   illustration: string;
   link: string;
 }
@@ -8,26 +9,30 @@ export interface Service {
 export const services: Service[] = [
   {
     id: "pool",
-    image: "/images/piscina.jpg",
+    image: "/images/hero-home.webp",
+    imgPosition: "object-center object-right",
     illustration: "/images/illustration-pool.png",
-    link: "#",
+    link: "/about/#pool",
   },
   {
     id: "spa",
-    image: "/images/spa.jpg",
+    image: "/images/spa.webp",
+    imgPosition: "object-center",
     illustration: "/images/illustration-spa.png",
-    link: "#",
+    link: "/about/#spa",
   },
   {
     id: "restaurant",
-    image: "/images/restaurant.jpg",
+    image: "/images/restaurant.webp",
+    imgPosition: "object-bottom",
     illustration: "/images/illustration-restaurant.png",
-    link: "#",
+    link: "/about/#restaurant",
   },
   {
     id: "bike",
-    image: "/images/bike.jpg",
+    image: "/images/bike.webp",
+    imgPosition: "object-[10%_70%] object-right",
     illustration: "/images/illustration-bike.png",
-    link: "#",
+    link: "/about/#bike",
   },
 ];

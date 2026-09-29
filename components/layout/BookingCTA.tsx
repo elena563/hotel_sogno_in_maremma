@@ -1,4 +1,5 @@
-import { Button } from "@/components/ui/button";
+import { Link } from "@/i18n/navigation";
+import { buttonVariants } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
 import BookingForm from "@/components/layout/BookingForm";
 
@@ -20,9 +21,12 @@ export default function BookingCTA({
       {type === "form" ? (
         <BookingForm />
       ) : (
-        <Button variant="default" className="w-full max-w-48">
-          {t("ctaButton")}
-        </Button>
+        <Link
+          href="/rooms#book"
+          className={`w-full max-w-48 ${buttonVariants({ variant: "default" })}`}
+        >
+                                {t("ctaButton")}
+                            </Link>
       )}
     </div>
   );

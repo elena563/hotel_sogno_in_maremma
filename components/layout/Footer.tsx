@@ -1,3 +1,5 @@
+import { Link } from "@/i18n/navigation";
+
 import Logo from "../icons/Logo";
 import { useTranslations } from "next-intl";
 import { FaInstagram } from "react-icons/fa";
@@ -8,7 +10,7 @@ export default function Footer() {
   const t = useTranslations("Footer");
 
   return (
-    <footer className="w-full bg-primary text-surface flex flex-col gap-4 px-4">
+    <footer id="footer" className="w-full bg-primary text-surface flex flex-col gap-4 px-4">
       <div className="flex flex-col lg:flex-row w-full items-center justify-between gap-10 py-6">
         <div className="flex flex-col items-center lg:items-start gap-2">
           <Logo type="short" className="w-[170px] md:w-[230px] mb-2" />
@@ -34,18 +36,18 @@ export default function Footer() {
           </div>
           <div className="flex flex-col gap-2 lg:w-[250px] items-center md:items-start">
             <h3 className="font-heading text-lg font-semibold">{t("info")}</h3>
-            <a className="underline" href="">
+            <Link className="underline" href="/privacy">
               {t("privacy")}
-            </a>
-            <a className="underline" href="">
+            </Link>
+            <Link className="underline" href="/about#spa">
               {t("vipSpaPools")}
-            </a>
-            <a className="underline" href="">
+            </Link>
+            <Link className="underline" href="/about#restaurant">
               {t("restaurant")}
-            </a>
-            <a className="underline" href="">
+            </Link>
+            <Link className="underline" href="/about#bike">
               {t("excursions")}
-            </a>
+            </Link>
             <div className="flex flex-col gap-2 mt-2">
               <IconButton aria-label="Instagram">
                 <FaInstagram />
