@@ -1,6 +1,7 @@
 import { integer, text, boolean, date, pgTable, pgEnum } from "drizzle-orm/pg-core";
 
 export const boardType = pgEnum("board_type", ["bb", "half_board", "full_board"]);
+export const season = pgEnum("season", ["low", "middle", "high"]);
 export const roomType = pgEnum("room_type", ["economy", "comfort", "deluxe", "hottub"]);
 export const bookingStatus = pgEnum("booking_status", ["pending", "confirmed", "completed", "cancelled"]);
 
@@ -15,6 +16,7 @@ export const booking = pgTable("bookings", {
     room: roomType("room").notNull(),
     price: integer("price").notNull(),
     board: boardType("board").notNull(),
+    season: season("season").notNull(),
     status: bookingStatus("status").default("pending").notNull(),
   deleted: boolean("deleted").default(false).notNull(),
 });

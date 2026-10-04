@@ -7,7 +7,7 @@ export default function RoomCard({ room }: { room: Room }) {
     <div className="flex flex-col mt-4">
       <div className="relative w-full h-64 md:h-56">
         <Image
-          src={room.header_image}
+          src={room.headerImage}
           alt={room.name}
           fill
           sizes="(min-width: 768px) 50vw, 100vw"
