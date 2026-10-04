@@ -1,26 +1,29 @@
 import ImageCarousel from "./ImageCarousel";
+import { useTranslations } from "next-intl";
 
 import { Room } from "@/lib/data/rooms";
 
 interface RoomDetailsProps {
   room: Room;
   type?: "gallery" | "quote";
+  price?: number;
 }
 
-export default function RoomDetails({ room, type }: RoomDetailsProps) {
+export default function RoomDetails({ room, type, price }: RoomDetailsProps) {
+  const t = useTranslations("Booking");
   return (
     <div className="flex flex-col md:flex-row gap-2 p-4 bg-surface">
       <div>
         <h3 className="text-secondary w-full font-heading font-semibold text-xl">
           {room.name}
         </h3>
-        {room.square_meters_double && (
-          <span className="text-sm">{room.square_meters_double} m² double</span>
+        {room.squareMetersDouble && (
+          <span className="text-sm">{room.squareMetersDouble} m² double</span>
         )}
-        {room.square_meters_quadruple && (
+        {room.squareMetersQuadruple && (
           <span className="text-sm">
             {" "}
-            | {room.square_meters_quadruple} m² quadruple
+            | {room.squareMetersQuadruple} m² quadruple
           </span>
         )}
         <p className="border-t border-t-secondary mt-2 pt-2">
@@ -33,6 +36,11 @@ export default function RoomDetails({ room, type }: RoomDetailsProps) {
           className="max-w-[12rem] sm:max-w-xs"
           sizes="(min-width: 640px) 320px, 192px"
         />
+      )}
+      {type === "quote" && price !== undefined && (
+        <p className="border-t border-t-secondary mt-2 pt-2 font-semibold">
+          {t("price")}: {Math.round(price)} €
+        </p>
       )}
     </div>
   );

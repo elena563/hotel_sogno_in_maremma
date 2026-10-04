@@ -16,7 +16,6 @@ export const booking = pgTable("bookings", {
     room: roomType("room").notNull(),
     price: integer("price").notNull(),
     board: boardType("board").notNull(),
-    season: season("season").notNull(),
     status: bookingStatus("status").default("pending").notNull(),
   deleted: boolean("deleted").default(false).notNull(),
 });

@@ -1,6 +1,3 @@
-"use client";
-
-import * as React from "react";
 import { format } from "date-fns";
 import { CalendarIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -15,9 +12,13 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 
-export function DatePickerRange() {
+type DatePickerRangeProps = {
+  value: DateRange | undefined;
+  onChange: (range: DateRange | undefined) => void;
+};
+
+export function DatePickerRange({ value, onChange }: DatePickerRangeProps) {
   const t = useTranslations("Other");
-  const [range, setRange] = React.useState<DateRange>();
 
   return (
     <Popover>
@@ -28,11 +29,11 @@ export function DatePickerRange() {
             className="justify-start text-left font-normal"
           >
             <CalendarIcon />
-            {range?.from ? (
-              range.to ? (
-                `${format(range.from, "dd MMM yyyy")} - ${format(range.to, "dd MMM yyyy")}`
+            {value?.from ? (
+              value.to ? (
+                `${format(value.from, "dd MMM yyyy")} - ${format(value.to, "dd MMM yyyy")}`
               ) : (
-                format(range.from, "dd MMM yyyy")
+                format(value.from, "dd MMM yyyy")
               )
             ) : (
               <span className="text-foreground">{t("dates")}</span>
@@ -43,8 +44,8 @@ export function DatePickerRange() {
       <PopoverContent className="w-auto p-0">
         <Calendar
           mode="range"
-          selected={range}
-          onSelect={setRange}
+          selected={value}
+          onSelect={onChange}
           numberOfMonths={2}
         />
       </PopoverContent>

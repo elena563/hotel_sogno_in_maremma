@@ -1,77 +1,86 @@
-import { Room, rooms } from "./data/rooms";
+"use server";
 
-export type Board = "bb" | "half_board" | "full_board";
+import { z } from "zod";
 
-export const BOARD_CONFIG = {
-  bb: {
-    supplementPerAdultPerNight: 0,
-    supplementPerChildPerNight: 0,
-  },
-  half_board: {
-    supplementPerAdultPerNight: 20,
-    supplementPerChildPerNight: 10,
-  },
-  full_board: {
-    supplementPerAdultPerNight: 35,
-    supplementPerChildPerNight: 20,
-  },
-} satisfies Record<Board, {
-  supplementPerAdultPerNight: number;
-  supplementPerChildPerNight: number;
-}>;
+import { db } from "@/db/db";
+import { booking } from "@/db/schema";
+import { getAvailableRooms } from "@/lib/availability";
+import { toLocalDate } from "@/lib/booking-search";
+import { rooms, type RoomType } from "@/lib/data/rooms";
+import { calculateTotalPrice, type Board } from "@/lib/pricing";
 
-export type Season = "low" | "middle" | "high";
+const ROOM_TYPES = [
+  "economy",
+  "comfort",
+  "deluxe",
+  "hottub",
+] as const satisfies readonly RoomType[];
 
-export const SEASON_CONFIG = {
-  low: {
-    percentage: 0,
-  },
-  middle: {
-    percentage: 0.1,
-  },
-  high: {
-    percentage: 0.2,
-  },
-} satisfies Record<Season, {
-  percentage: number;
-}>;
+const BOARD_VALUES = [
+  "bb",
+  "half_board",
+  "full_board",
+] as const satisfies readonly Board[];
 
-function calculateSeason(checkin: string, checkout: string): Season {
-  const checkinDate = new Date(checkin).getTime();
-  const checkoutDate = new Date(checkout).getTime();
-  const midpoint = new Date((checkinDate + checkoutDate) / 2);
+const bookingSchema = z.object({
+  name: z.string().trim().min(1).max(200),
+  email: z.email(),
+  checkIn: z.iso.date(),
+  checkOut: z.iso.date(),
+  adults: z.coerce.number().int().min(0).max(20),
+  children: z.coerce.number().int().min(0).max(20),
+  room: z.enum(ROOM_TYPES),
+  board: z.enum(BOARD_VALUES),
+});
 
-  const month = midpoint.getMonth() + 1; //getmonth outputs 0-11
-  const day = midpoint.getDate();
+export type BookingResult =
+  | { ok: true }
+  | { ok: false; reason: "invalid" | "unavailable" };
 
-  if (month === 7 || month === 8) {
-    return "high";
-  } else if ((month === 6 && day >= 15) || (month === 9 && day < 15)) {
-    return "middle";
-  } else {
-    return "low";
+export async function createBooking(
+  formData: FormData,
+): Promise<BookingResult> {
+  const parsed = bookingSchema.safeParse(Object.fromEntries(formData));
+
+  if (!parsed.success) return { ok: false, reason: "invalid" };
+
+  const { name, email, adults, children, room: roomType, board } = parsed.data;
+
+  const checkIn = toLocalDate(parsed.data.checkIn);
+  const checkOut = toLocalDate(parsed.data.checkOut);
+
+  if (checkOut <= checkIn) return { ok: false, reason: "invalid" };
+
+  const room = rooms.find((candidate) => candidate.type === roomType);
+
+  if (!room) return { ok: false, reason: "invalid" };
+
+  const stillAvailable = await getAvailableRooms(
+    rooms,
+    adults + children,
+    checkIn,
+    checkOut,
+  );
+
+  if (!stillAvailable.some((candidate) => candidate.type === roomType)) {
+    return { ok: false, reason: "unavailable" };
   }
-}
 
-// 1 get input data from the form
+  const price = Math.round(
+    calculateTotalPrice(room, adults, children, board, checkIn, checkOut),
+  );
 
-// 2 validate the input data
+  await db.insert(booking).values({
+    name,
+    email,
+    adults,
+    children,
+    checkIn,
+    checkOut,
+    room: roomType,
+    board,
+    price,
+  });
 
-// 3 check available options for input data
-
-// 4 calculate the total price based on input data and available options
-function calculateTotalPrice(
-    room: Room, 
-    nNights: number, 
-    nAdults: number, 
-    nChildren: number, 
-    board: Board,
-    season: Season
-    ): number {
-  const boardConfig = BOARD_CONFIG[board];
-  const roomPrice = room.basePrice * nNights;
-  const boardPrice = boardConfig.supplementPerAdultPerNight * nAdults * nNights + boardConfig.supplementPerChildPerNight * nChildren * nNights;
-  const seasonConfig = SEASON_CONFIG[season];
-  const seasonSupplement = (roomPrice + boardPrice) * seasonConfig.percentage;
-  return roomPrice + boardPrice + seasonSupplement;
+  return { ok: true };
 }

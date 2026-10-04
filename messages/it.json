@@ -7,6 +7,7 @@
     "ctaTitle": "Prenota il tuo soggiorno",
     "ctaSubtitle": "Scegli le date e prenota il tuo soggiorno in pochi semplici passi.",
     "ctaButton": "Prenota ora",
+  "price": "Prezzo totale",
     "form": {
       "name": "Nome",
       "namePlaceholder": "Inserisci il tuo nome",
@@ -14,11 +15,16 @@
       "emailPlaceholder": "Inserisci il tuo indirizzo email",
       "period": "Periodo",
       "board": "Trattamento",
-      "boardPlaceholder": "Seleziona il trattamento",
-      "adults": "Adulti",
-      "children": "Bambini",
-      "terms": "Accetto i termini e le condizioni",
-      "submit": "Prenota ora"
+    "boardPlaceholder": "Seleziona il trattamento",
+    "boardBb": "Solo pernottamento",
+    "boardHalfBoard": "Mezza pensione",
+    "boardFullBoard": "Pensione completa",
+    "adults": "Adulti",
+    "children": "Bambini",
+    "terms": "Accetto i termini e le condizioni",
+    "submit": "Prenota ora"
+    "search": "Cerca disponibilità",
+    "incompleteDates": "Seleziona le date di arrivo e partenza"
     }
   },
   "LanguageButton": {

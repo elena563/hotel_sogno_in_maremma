@@ -1,6 +1,9 @@
+export type RoomType = "economy" | "comfort" | "deluxe" | "hottub";
+
 export interface Room {
   id: number;
   name: string;
+  type: RoomType;
   description: string;
   headerImage: string;
   images: { src: string; alt: string }[];
@@ -15,6 +18,7 @@ export const rooms: Room[] = [
   {
     id: 1,
     name: "Economy Room",
+    type: "economy",
     description:
       "Our Economy Room offers a cozy and comfortable stay with all the essential amenities you need for a relaxing getaway. Perfect for solo travelers or couples, this room provides a budget-friendly option without compromising on quality.",
     headerImage: "/images/economy-room.jpg",
@@ -31,6 +35,7 @@ export const rooms: Room[] = [
   },
   {
     id: 2,
+    type: "comfort",
     name: "Comfort Room",
     description:
       "Experience the ultimate in comfort and luxury in our Deluxe Room, featuring a spacious layout, elegant furnishings, and modern amenities. Enjoy a restful night's sleep in our plush bedding, and wake up to stunning views of the surrounding landscape.",
@@ -49,6 +54,7 @@ export const rooms: Room[] = [
   {
     id: 3,
     name: "Deluxe Suite",
+    type: "deluxe",
     description:
       "Experience the ultimate in comfort and luxury in our Deluxe Room, featuring a spacious layout, elegant furnishings, and modern amenities. Enjoy a restful night's sleep in our plush bedding, and wake up to stunning views of the surrounding landscape.",
     headerImage: "/images/deluxe-room.jpg",
@@ -66,6 +72,7 @@ export const rooms: Room[] = [
   {
     id: 4,
     name: "HotTub Suite",
+    type: "hottub",
     description:
       "Experience the ultimate in comfort and luxury in our Deluxe Room, featuring a spacious layout, elegant furnishings, and modern amenities. Enjoy a restful night's sleep in our plush bedding, and wake up to stunning views of the surrounding landscape.",
     headerImage: "/images/deluxe-room.jpg",

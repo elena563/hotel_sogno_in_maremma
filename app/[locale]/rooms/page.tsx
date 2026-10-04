@@ -1,13 +1,25 @@
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
 import RoomsRow from "@/components/layout/RoomsRow";
-import BookingCTA from "@/components/layout/BookingCTA";
+import RoomsBooking from "@/components/layout/RoomsBooking";
+import { getAvailableRooms } from "@/lib/availability";
+import { parseBookingSearch } from "@/lib/booking-search";
 
 import { rooms } from "@/lib/data/rooms";
 
-export default function RoomsPage() {
-    const t = useTranslations();
+type RoomsPageProps = {
+    searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+};
+
+export default async function RoomsPage({ searchParams }: RoomsPageProps) {
+    const t = await getTranslations();
+
+    const search = parseBookingSearch(await searchParams);
+    const availableRooms = search
+        ? await getAvailableRooms(rooms, search.adults + search.children, search.checkIn, search.checkOut)
+        : rooms;
+
     return (
         <div className="flex flex-col flex-1 items-center justify-center bg-background font-serif">
             <section className="relative h-[80vh]">
@@ -35,7 +47,7 @@ export default function RoomsPage() {
                     <RoomsRow rooms={rooms} />
                 </div>
                 <span id="book"></span>
-                <BookingCTA type="form" />
+                <RoomsBooking rooms={availableRooms} search={search} />
             </main>
       </div>
     );
