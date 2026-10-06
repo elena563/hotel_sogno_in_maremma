@@ -1,6 +1,6 @@
 import { Room } from "@/lib/data/rooms";
 import { BookingSearch } from "@/lib/types";
-import { getTranslations } from "next-intl/server";
+import { useTranslations } from "next-intl";
 
 type Props = {
   search: BookingSearch;
@@ -8,8 +8,8 @@ type Props = {
   room: Room;
 };
 
-export default async function BookingSummary({ search, price, room }: Props) {
-    const t = await getTranslations("Booking");
+export default function BookingSummary({ search, price, room }: Props) {
+    const t = useTranslations("Booking");
 
   return (
     <div className="bg-white p-4 rounded-lg shadow-md">

@@ -11,7 +11,7 @@ Project sections
 
 - Header with responsive navigation menu
 - Homepage: hero section, booking section preview, services list and description
-- Rooms: accomodation and services options with price calculator
+- Rooms and booking: detailed information about the four room types, booking section with price calculator and booking form
 - Footer with contacting info, social media icons and location map
 
 ## User Interface Preview
@@ -31,7 +31,7 @@ Project sections
 - **Responsive Design**: Ensures a seamless experience across various devices.
 - **Photo Gallery**: Captivating images showcasing the beauty of the hotel and its exclusive services.
 - **Room Information**: Animated section with details about four room types available.
-- **Booking section**: User interface of a detailed booking dashboard with a js costumized price calculator.
+- **Booking section**: Interactive booking form with date selection, number of guests, and board type. Prices are automatically calculated based on user input.
 - **Contact and Location**: Information for easy communication and an interactive map for location.
 
 ## Technologies Used & Design Features

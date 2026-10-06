@@ -22,7 +22,7 @@ export default async function BookingPage({ searchParams }: Props) {
 
   const room = rooms.find(r => r.type === search.room);
   if (!room) redirect("/");
-  const price = calculateTotalPrice(room!, search.adults, search.children, search.board, search.checkIn, search.checkOut);
+  const price = calculateTotalPrice(room, search.adults, search.children, search.board, search.checkIn, search.checkOut);
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen p-4 w-[min(100%-2rem,72rem)] mx-auto">
