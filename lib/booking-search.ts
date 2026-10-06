@@ -9,7 +9,7 @@ const bookingSearchSchema = z.object({
   adults: z.coerce.number().int().min(0).max(20).default(0),
   children: z.coerce.number().int().min(0).max(20).default(0),
   board: z.enum(BOARD_VALUES).default("bb"),
-  room: z.enum(ROOM_TYPES)
+  room: z.enum(ROOM_TYPES).optional()
 });
 
 

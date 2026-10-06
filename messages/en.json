@@ -17,6 +17,8 @@
     "confirmed": "Booking confirmed!",
     "confirmMessage": "Thank you! Your request has been received. You will receive a confirmation by email.",
     "back": "Back to home",
+    "starting": "Starting from",
+    "night": "night",
     "form": {
       "name": "Name",
       "namePlaceholder": "Enter your name",

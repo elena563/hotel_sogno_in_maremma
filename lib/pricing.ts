@@ -83,5 +83,6 @@ export function calculateTotalPrice(
   const season = calculateSeason(checkIn, checkOut);
   const seasonConfig = SEASON_CONFIG[season];
   const seasonSupplement = (roomPrice + boardPrice) * seasonConfig.percentage;
-  return roomPrice + boardPrice + seasonSupplement;
+  const price =  roomPrice + boardPrice + seasonSupplement;
+  return price;
 }

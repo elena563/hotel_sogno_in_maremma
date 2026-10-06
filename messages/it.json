@@ -17,6 +17,8 @@
     "confirmed": "Prenotazione confermata!",
     "confirmMessage": "Grazie! La tua richiesta è stata ricevuta. Riceverai una conferma via email.",
     "back": "Torna alla home",
+    "starting": "A partire da",
+    "night": "notte",
     "form": {
       "name": "Nome",
       "namePlaceholder": "Inserisci il tuo nome",
