@@ -8,11 +8,11 @@ import { parseBookingSearch } from "@/lib/booking-search";
 
 import { rooms } from "@/lib/data/rooms";
 
-type RoomsPageProps = {
+type Props = {
     searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 };
 
-export default async function RoomsPage({ searchParams }: RoomsPageProps) {
+export default async function RoomsPage({ searchParams }: Props) {
     const t = await getTranslations();
 
     const search = parseBookingSearch(await searchParams);

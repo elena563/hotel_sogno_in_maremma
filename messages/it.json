@@ -7,7 +7,16 @@
     "ctaTitle": "Prenota il tuo soggiorno",
     "ctaSubtitle": "Scegli le date e prenota il tuo soggiorno in pochi semplici passi.",
     "ctaButton": "Prenota ora",
-  "price": "Prezzo totale",
+    "price": "Prezzo totale",
+    "summary": "Riepilogo della tua prenotazione",
+    "to": "al",
+    "adults": "adulti",
+    "children": "bambini",
+    "room": "Camera",
+    "total": "Totale",
+    "confirmed": "Prenotazione confermata!",
+    "confirmMessage": "Grazie! La tua richiesta è stata ricevuta. Riceverai una conferma via email.",
+    "back": "Torna alla home",
     "form": {
       "name": "Nome",
       "namePlaceholder": "Inserisci il tuo nome",
@@ -15,16 +24,15 @@
       "emailPlaceholder": "Inserisci il tuo indirizzo email",
       "period": "Periodo",
       "board": "Trattamento",
-    "boardPlaceholder": "Seleziona il trattamento",
-    "boardBb": "Solo pernottamento",
-    "boardHalfBoard": "Mezza pensione",
-    "boardFullBoard": "Pensione completa",
-    "adults": "Adulti",
-    "children": "Bambini",
-    "terms": "Accetto i termini e le condizioni",
-    "submit": "Prenota ora"
-    "search": "Cerca disponibilità",
-    "incompleteDates": "Seleziona le date di arrivo e partenza"
+      "boardPlaceholder": "Seleziona il trattamento",
+      "boardBb": "Solo pernottamento",
+      "boardHalfBoard": "Mezza pensione",
+      "boardFullBoard": "Pensione completa",
+      "adults": "Adulti",
+      "children": "Bambini",
+      "terms": "Accetto i termini e le condizioni",
+      "search": "Cerca disponibilità",
+      "confirm": "Conferma prenotazione"
     }
   },
   "LanguageButton": {
@@ -144,9 +152,9 @@
     },
     "advice": {
       "title": "Un consiglio",
-      "text": "Poiché si tratta di un progetto didattico, ti chiediamo di usare dati fittizi. Inserisci un nome di fantasia e un indirizzo email inesistente, e non condividere informazioni personali reali."
+      "text": "Poiché si tratta di un progetto didattico, ti chiediamo di usare dati fittizi. Inserisci un nome di fantasia e un indirizzo email inesistente, e non condividere informazioni personali reali.\n Questo progetto prevede anche la conferma via email, quindi inserisci un indirizzo valido per poterla visualizzare. Non è obbligatorio e l'indirizzo inviato non viene memorizzato e viene cancellato dopo 30 giorni."
     },
-    "updated": "Ultimo aggiornamento: settembre 2026"
+    "updated": "Ultimo aggiornamento: ottobre 2026"
   },
   "Footer": {
     "copyright": "Tutti i diritti riservati - Progetto di",

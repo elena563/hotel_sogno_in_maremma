@@ -1,7 +1,7 @@
 import BookingCTA from "@/components/layout/BookingCTA";
 import { Room } from "@/lib/data/rooms";
 import { calculateTotalPrice } from "@/lib/pricing";
-import type { BookingSearch } from "@/lib/booking-search";
+import type { BookingSearch } from "@/lib/types";
 import RoomDetails from "./RoomDetails";
 
 type RoomsBookingProps = {

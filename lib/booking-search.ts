@@ -1,8 +1,7 @@
 import { z } from "zod";
 
-import type { Board } from "./pricing";
+import { ROOM_TYPES, BOARD_VALUES, BookingSearch } from "./types";
 
-const BOARD_VALUES = ["bb", "half_board", "full_board"] as const satisfies readonly Board[];
 
 const bookingSearchSchema = z.object({
   checkIn: z.iso.date(),
@@ -10,15 +9,9 @@ const bookingSearchSchema = z.object({
   adults: z.coerce.number().int().min(0).max(20).default(0),
   children: z.coerce.number().int().min(0).max(20).default(0),
   board: z.enum(BOARD_VALUES).default("bb"),
+  room: z.enum(ROOM_TYPES)
 });
 
-export type BookingSearch = {
-  checkIn: Date;
-  checkOut: Date;
-  adults: number;
-  children: number;
-  board: Board;
-};
 
 export function toLocalDate(iso: string): Date {
   const [year, month, day] = iso.split("-").map(Number);
@@ -43,5 +36,6 @@ export function parseBookingSearch(
     adults: parsed.data.adults,
     children: parsed.data.children,
     board: parsed.data.board,
+    room: parsed.data.room,
   };
 }

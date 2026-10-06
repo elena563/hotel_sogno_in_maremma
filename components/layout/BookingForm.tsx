@@ -7,7 +7,6 @@ import type { DateRange } from "react-day-picker";
 import { Button } from "@/components/ui/button";
 import { Field, FieldGroup, FieldLabel } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
-import { Checkbox } from "@/components/ui/checkbox";
 import { DatePickerRange } from "@/components/ui/date-picker";
 import { useTranslations } from "next-intl";
 import { useRouter } from "@/i18n/navigation";
@@ -69,16 +68,6 @@ export default function BookingForm() {
       className="w-full flex flex-col gap-4 p-4 bg-primary"
       onSubmit={handleSubmit}
     >
-      <FieldGroup className="flex-1 md:flex-row ">
-        <Field>
-          <FieldLabel>{t("name")}</FieldLabel>
-          <Input placeholder={t("namePlaceholder")} />
-        </Field>
-        <Field>
-          <FieldLabel>{t("email")}</FieldLabel>
-          <Input type="email" placeholder={t("emailPlaceholder")} />
-        </Field>
-      </FieldGroup>
       <FieldGroup className="flex-1 md:flex-row items-end">
         <Field>
           <FieldLabel>{t("period")}</FieldLabel>
@@ -126,10 +115,6 @@ export default function BookingForm() {
           />
         </Field>
       </FieldGroup>
-      <Field orientation="horizontal">
-        <Checkbox id="terms-checkbox" name="terms-checkbox" />
-        <FieldLabel htmlFor="terms-checkbox">{t("terms")}</FieldLabel>
-      </Field>
       <Button type="submit" variant="default" className="w-full max-w-48">
         {t("search")}
       </Button>
