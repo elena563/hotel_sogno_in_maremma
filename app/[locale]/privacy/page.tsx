@@ -7,7 +7,7 @@ export default function PrivacyPage() {
     <div className="flex flex-col flex-1 items-center justify-center bg-background font-serif">
       <main className="flex flex-1 w-full flex-col max-w-6xl items-center justify-between pb-16 pt-8 sm:items-start">
         <div className="w-full flex flex-col items-center gap-6 px-6 py-16">
-          <h1 className="text-3xl md:text-4xl font-heading font-bold text-center mb-8">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-center mb-8">
             {t("headline")}
           </h1>
 

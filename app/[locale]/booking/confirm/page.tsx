@@ -30,7 +30,7 @@ export default async function ConfirmedPage({ searchParams }: Props) {
   return (
     <div className="flex flex-col items-center gap-10 min-h-screen py-12 w-[min(100%-2rem,72rem)] mx-auto">
       <CircleCheckBig className="mx-auto w-16 h-16 text-secondary" />
-      <h2 className="text-3xl font-bold font-heading text-center text-secondary">{t("confirmed")}</h2>
+      <h2 className="text-2xl sm:text-3xl font-bold font-heading text-center text-secondary">{t("confirmed")}</h2>
       <p className="text-center">{t("confirmMessage")}</p>
       <BookingSummary 
         search={{

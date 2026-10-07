@@ -40,8 +40,8 @@ export default function AboutPage() {
                 </div>
                 
                 <div className="relative z-10 w-full flex flex-col-reverse md:flex-row items-center justify-center gap-8 py-16 md:px-6">
-                    <div className="flex flex-col items-start gap-6 px-6">
-                        <h2 className="text-3xl font-semibold font-heading text-secondary">
+                    <div className="flex flex-col items-start gap-6 px-4 md:px-6">
+                        <h2 className="text-2xl sm:text-3xl font-semibold font-heading text-secondary">
                         {t("About.intro")}
                         </h2>
                         <p className="text-left whitespace-pre-line">
@@ -69,10 +69,10 @@ export default function AboutPage() {
             <main className="flex flex-1 w-full flex-col items-center justify-between pb-16 pt-8 sm:items-start">
                 <section id="services" className="py-6 flex flex-1 w-full flex-col items-center justify-center">
                     <div className="max-w-6xl">
-                        <h2 className="text-3xl font-semibold font-heading text-secondary text-center mb-4">
+                        <h2 className="text-2xl sm:text-3xl font-semibold font-heading text-secondary sm:text-center mx-4 mb-4">
                             {t("Services.headline")}
                         </h2>
-                        <p className="text-left sm:text-center mb-8 px-6">
+                        <p className="text-left sm:text-center mb-8 px-4 md:px-6">
                             {t("Services.text")}
                         </p>
                     </div>
@@ -93,8 +93,9 @@ export default function AboutPage() {
                     ))}
                 </section>
               
-                
-                <BookingCTA type="default" />
+                <div className="w-[calc(100%-2rem)] max-w-6xl mx-auto">
+                    <BookingCTA type="default" />
+                </div>
             </main>
       </div>
     );

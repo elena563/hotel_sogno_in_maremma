@@ -15,7 +15,7 @@ export default function ServicePreviewCard({ service }: { service: Service }) {
         height={150}
         className="object-cover"
       />
-      <h3 className="text-2xl font-semibold">{t(`Services.${service.id}.title`)}</h3>
+      <h3 className="text-xl sm:text-2xl font-semibold">{t(`Services.${service.id}.title`)}</h3>
       <p className="text-gray-600 text-center">{t(`Services.${service.id}.description`)}</p>
       <Link href={service.link} className="text-secondary hover:underline">
         {t("Other.discover")}

@@ -55,7 +55,7 @@ export default function Home() {
         className="object-cover object-center"
       />
       <div className="absolute bottom-0 left-0 p-6 m-6 bg-foreground/50 z-10 flex flex-col gap-6 items-start justify-end md:max-w-xl text-surface">
-        <h1 className="text-6xl font-heading font-bold">
+        <h1 className="text-4xl sm:text-6xl font-heading font-bold">
           {t("Home.headline")}
         </h1>
         <p>{t("Home.subheadline")}</p>
@@ -74,15 +74,15 @@ export default function Home() {
           <div className="w-full grid grid-cols-2 md:grid-cols-4 justify-evenly gap-10 py-6">
           {Object.entries(icons).map(([key, Icon], index) => (
             <div key={index} className="flex flex-col items-center gap-2">
-              <Icon className="w-10 h-10 text-secondary" />
-              <span className="text-2xl md:text-3xl font-heading text-secondary">
+              <Icon className="w-8 h-8 sm:w-10 sm:h-10 text-secondary" />
+              <span className="text-xl md:text-3xl font-heading text-secondary">
                 {t(`Home.icons.${key}`)}
               </span>
             </div>
             ))}
           </div>
           <div className="flex flex-col items-center gap-6 px-6 py-10">
-            <h2 className="text-3xl font-semibold font-heading text-secondary text-center">
+            <h2 className="text-2xl sm:text-3xl font-semibold font-heading text-secondary text-center">
               {t("Home.intro")}
             </h2>
             <p className="text-left sm:text-center">
@@ -101,7 +101,7 @@ export default function Home() {
           />
         </div>
         <section className="px-6 py-10">
-          <h2 className="text-3xl font-semibold font-heading text-secondary text-center mb-6">
+          <h2 className="text-2xl sm:text-3xl font-semibold font-heading text-secondary text-center mb-6">
             {t("Home.reviews")}
           </h2>
           <div className="flex flex-col md:flex-row gap-4">
@@ -116,7 +116,7 @@ export default function Home() {
           </div>
         </section>
         <section className="p-6">
-          <h2 className="text-3xl font-semibold font-heading text-secondary text-center mb-4">
+          <h2 className="text-2xl sm:text-3xl font-semibold font-heading text-secondary text-center mb-4">
             {t("Services.title")}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -125,7 +125,9 @@ export default function Home() {
             ))}
           </div>
         </section>
-        <BookingCTA type="default" />
+        <div className="w-[calc(100%-2rem)] max-w-6xl mx-auto">
+          <BookingCTA type="default" />
+        </div>
       </main>
     </div>
   );
