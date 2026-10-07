@@ -25,8 +25,8 @@ import {
 
 type BookingFormState = {
   range: DateRange | undefined;
-  adults: number;
-  children: number;
+  adults: string;
+  children: string;
   board: Board;
 };
 
@@ -34,17 +34,17 @@ export default function BookingForm() {
   const t = useTranslations("Booking.form");
   const router = useRouter();
   const boardLabels: Record<Board, string> = {
-    bb: t("boardBb"),
-    half_board: t("boardHalfBoard"),
-    full_board: t("boardFullBoard"),
+    bb: t("bb"),
+    half_board: t("half_board"),
+    full_board: t("full_board"),
   };
 
   const [isPending, startTransition] = useTransition();
 
   const [formData, setFormData] = useState<BookingFormState>({
     range: undefined,
-    adults: 2,
-    children: 0,
+    adults: "2",
+    children: "0",
     board: "bb",
   });
 
@@ -55,9 +55,12 @@ export default function BookingForm() {
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    const { range, adults, children, board } = formData;
+    const { range, board } = formData;
 
     if (!range?.from || !range.to) return;
+
+    const adults = Math.min(20, Math.max(0, Number(formData.adults) || 0));
+    const children = Math.min(20, Math.max(0, Number(formData.children) || 0));
 
     const checkIn = format(range.from, "yyyy-MM-dd");
     const checkOut = format(range.to, "yyyy-MM-dd");
@@ -86,14 +89,15 @@ export default function BookingForm() {
     >
       <FieldGroup className="flex-1 md:flex-row items-end">
         <Field>
-          <FieldLabel>{t("period")}</FieldLabel>
+          <FieldLabel htmlFor="period">{t("period")}</FieldLabel>
           <DatePickerRange
+            id="period"
             value={formData.range}
             onChange={(range) => handleChange({ range })}
           />
         </Field>
         <Field>
-          <FieldLabel>{t("board")}</FieldLabel>
+          <FieldLabel htmlFor="board">{t("board")}</FieldLabel>
           <Select
             value={formData.board}
             onValueChange={(board) => handleChange({ board: board as Board })}
@@ -101,36 +105,40 @@ export default function BookingForm() {
               boardLabels[value as Board] ?? String(value)
             }
           >
-            <SelectTrigger className="w-full">
+            <SelectTrigger id="board" className="w-full">
               <SelectValue placeholder={t("boardPlaceholder")} />
             </SelectTrigger>
             <SelectContent>
               <SelectGroup>
-                <SelectItem value="bb">{t("boardBb")}</SelectItem>
-                <SelectItem value="half_board">{t("boardHalfBoard")}</SelectItem>
-                <SelectItem value="full_board">{t("boardFullBoard")}</SelectItem>
+                <SelectItem value="bb">{t("bb")}</SelectItem>
+                <SelectItem value="half_board">{t("half_board")}</SelectItem>
+                <SelectItem value="full_board">{t("full_board")}</SelectItem>
               </SelectGroup>
             </SelectContent>
           </Select>
         </Field>
         <Field>
-          <FieldLabel>{t("adults")}</FieldLabel>
+          <FieldLabel htmlFor="adults">{t("adults")}</FieldLabel>
           <Input
+            id="adults"
+            name="adults"
             type="number"
             min={0}
             max={20}
             value={formData.adults}
-            onChange={(event) => handleChange({ adults: Number(event.target.value) })}
+            onChange={(event) => handleChange({ adults: event.target.value })}
           />
         </Field>
         <Field>
-          <FieldLabel>{t("children")}</FieldLabel>
+          <FieldLabel htmlFor="children">{t("children")}</FieldLabel>
           <Input
+            id="children"
+            name="children"
             type="number"
             min={0}
             max={20}
             value={formData.children}
-            onChange={(event) => handleChange({ children: Number(event.target.value) })}
+            onChange={(event) => handleChange({ children: event.target.value })}
           />
         </Field>
       </FieldGroup>

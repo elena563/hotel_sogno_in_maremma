@@ -16,6 +16,7 @@ export default async function BookingPage({ searchParams }: Props) {
     const t = await getTranslations("Booking");
     const search = parseBookingSearch(await searchParams);
   if (!search) redirect("/rooms");
+  if (!search.room) redirect("/rooms");
 
   const availableRooms = await getAvailableRooms(rooms, search.adults + search.children, search.checkIn, search.checkOut);
   if (!availableRooms.some(r => r.type === search.room)) redirect("/rooms");
@@ -24,9 +25,10 @@ export default async function BookingPage({ searchParams }: Props) {
   if (!room) redirect("/");
   const price = calculateTotalPrice(room, search.adults, search.children, search.board, search.checkIn, search.checkOut);
 
+  
+
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen p-4 w-[min(100%-2rem,72rem)] mx-auto">
-            <h1 className="text-3xl font-bold mb-4">{t("ctaTitle")}</h1>
+        <div className="flex flex-col gap-10 min-h-screen py-12 w-[min(100%-2rem,72rem)] mx-auto">
             <BookingSummary search={search} price={price} room={room} />
             <ConfirmForm search={search} />
         </div>

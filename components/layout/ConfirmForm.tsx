@@ -23,12 +23,12 @@ export default function ConfirmForm({ search }: { search: BookingSearch }) {
       >
       <FieldGroup className="flex-1 md:flex-row ">
           <Field>
-            <FieldLabel>{t("name")}</FieldLabel>
-            <Input name="name" placeholder={t("namePlaceholder")} />
+            <FieldLabel htmlFor="name">{t("name")}</FieldLabel>
+            <Input id="name" name="name" placeholder={t("namePlaceholder")} />
           </Field>
           <Field>
-            <FieldLabel>{t("email")}</FieldLabel>
-            <Input name="email" type="email" placeholder={t("emailPlaceholder")} />
+            <FieldLabel htmlFor="email">{t("email")}</FieldLabel>
+            <Input id="email" name="email" type="email" placeholder={t("emailPlaceholder")} />
           </Field>
         </FieldGroup>
         <Field orientation="horizontal">

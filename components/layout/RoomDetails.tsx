@@ -30,7 +30,7 @@ const amenities: Record<string, LucideIcon> = {
 export default function RoomDetails({ room, search, type, price }: RoomDetailsProps) {
   const t = useTranslations("");
   return (
-    <div className="w-full justify-between flex flex-col md:flex-row gap-2 p-4 bg-surface">
+    <div className="w-full justify-between flex flex-col md:flex-row gap-2 p-4 bg-surface !mt-4">
       <div className={`flex flex-col gap-4 w-full ${type === 'quote' ? 'md:flex-row md:gap-8' : 'md:gap-4'}`}>
         <div className={`flex flex-col w-full ${type === 'gallery' ? 'gap-2 md:flex-row' : ''}`}>
           <div>

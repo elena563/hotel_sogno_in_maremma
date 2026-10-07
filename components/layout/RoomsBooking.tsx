@@ -11,11 +11,11 @@ type RoomsBookingProps = {
 
 export default function RoomsBooking({ rooms, search }: RoomsBookingProps) {
   return (
-    <div id="room-booking" className="w-full">
+    <div id="room-booking" className="w-full w-[min(100%-2rem,72rem)]">
         <BookingCTA type="form" />
 
         {rooms.map((room) => (
-        <div key={room.id} className="w-full flex flex-col m-4 gap-4 items-center">
+        <div key={room.id} className="w-full flex flex-col gap-4 items-center">
             <RoomDetails
               room={room}
               search={search || undefined}

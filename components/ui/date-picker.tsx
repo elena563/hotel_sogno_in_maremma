@@ -13,11 +13,12 @@ import {
 } from "@/components/ui/popover";
 
 type DatePickerRangeProps = {
+  id?: string;
   value: DateRange | undefined;
   onChange: (range: DateRange | undefined) => void;
 };
 
-export function DatePickerRange({ value, onChange }: DatePickerRangeProps) {
+export function DatePickerRange({ id, value, onChange }: DatePickerRangeProps) {
   const t = useTranslations("Other");
 
   return (
@@ -25,6 +26,7 @@ export function DatePickerRange({ value, onChange }: DatePickerRangeProps) {
       <PopoverTrigger
         render={
           <Button
+            id={id}
             variant="secondary"
             className="justify-start text-left font-normal"
           >
