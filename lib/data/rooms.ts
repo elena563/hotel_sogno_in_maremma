@@ -2,9 +2,7 @@ export type RoomType = "economy" | "comfort" | "deluxe" | "hottub";
 
 export interface Room {
   id: number;
-  name: string;
   type: RoomType;
-  description: string;
   headerImage: string;
   images: { src: string; alt: string }[];
   squareMetersDouble: number;
@@ -17,73 +15,61 @@ export interface Room {
 export const rooms: Room[] = [
   {
     id: 1,
-    name: "Economy Room",
     type: "economy",
-    description:
-      "Our Economy Room offers a cozy and comfortable stay with all the essential amenities you need for a relaxing getaway. Perfect for solo travelers or couples, this room provides a budget-friendly option without compromising on quality.",
-    headerImage: "/images/economy-room.jpg",
+    headerImage: "/images/economy-room.webp",
     images: [
-      { src: "/images/economy-room.jpg", alt: "Economy Room" },
-      { src: "/images/economy-bathroom.jpg", alt: "Economy Bathroom" },
-      { src: "/images/window.jpg", alt: "Window" },
+      { src: "/images/economy-room.webp", alt: "Economy Room" },
+      { src: "/images/economy-bathroom.webp", alt: "Economy Bathroom" },
+      { src: "/images/window.webp", alt: "Window" },
     ],
     squareMetersDouble: 25,
     squareMetersQuadruple: 35,
     maxOccupancy: 4,
     basePrice: 69,
-    amenities: ["Free Wi-Fi", "Air Conditioning", "Flat-screen TV", "Safe", "Mini Fridge"]
+    amenities: ["wifi", "fan", "monitor", "vault", "wine"]
   },
   {
     id: 2,
     type: "comfort",
-    name: "Comfort Room",
-    description:
-      "Experience the ultimate in comfort and luxury in our Deluxe Room, featuring a spacious layout, elegant furnishings, and modern amenities. Enjoy a restful night's sleep in our plush bedding, and wake up to stunning views of the surrounding landscape.",
-    headerImage: "/images/deluxe-room.jpg",
+    headerImage: "/images/comfort-room.webp",
     images: [
-      { src: "/images/deluxe-room.jpg", alt: "Deluxe Room" },
-      { src: "/images/deluxe-bathroom.jpg", alt: "Deluxe Bathroom" },
-      { src: "/images/balcony.jpg", alt: "Balcony" },
+      { src: "/images/comfort-room.webp", alt: "Comfort Room" },
+      { src: "/images/comfort-bathroom.webp", alt: "Comfort Bathroom" },
+      { src: "/images/comfort-detail.webp", alt: "Comfort Detail" },
     ],
     squareMetersDouble: 30,
     squareMetersQuadruple: 40,
     maxOccupancy: 4,
     basePrice: 85,
-    amenities: ["Free Wi-Fi", "Air Conditioning", "Flat-screen TV", "Safe", "Mini Fridge"]
+    amenities: ["wifi", "fan", "monitor", "vault", "wine"]
   },
   {
     id: 3,
-    name: "Deluxe Suite",
     type: "deluxe",
-    description:
-      "Experience the ultimate in comfort and luxury in our Deluxe Room, featuring a spacious layout, elegant furnishings, and modern amenities. Enjoy a restful night's sleep in our plush bedding, and wake up to stunning views of the surrounding landscape.",
-    headerImage: "/images/deluxe-room.jpg",
+    headerImage: "/images/deluxe-room.webp",
     images: [
-      { src: "/images/deluxe-room.jpg", alt: "Deluxe Room" },
-      { src: "/images/deluxe-bathroom.jpg", alt: "Deluxe Bathroom" },
-      { src: "/images/balcony.jpg", alt: "Balcony" },
+      { src: "/images/deluxe-room.webp", alt: "Deluxe Room" },
+      { src: "/images/deluxe-bathroom.webp", alt: "Deluxe Bathroom" },
+      { src: "/images/balcony.webp", alt: "Balcony" },
     ],
     squareMetersDouble: 45,
     squareMetersQuadruple: 55,
     maxOccupancy: 4,
     basePrice: 102,
-    amenities: ["Free Wi-Fi", "Air Conditioning", "Flat-screen TV", "Safe", "Mini Fridge", "Living Area"]
+    amenities: ["wifi", "fan", "monitor", "vault", "wine", "sofa"]
   },
   {
     id: 4,
-    name: "HotTub Suite",
     type: "hottub",
-    description:
-      "Experience the ultimate in comfort and luxury in our Deluxe Room, featuring a spacious layout, elegant furnishings, and modern amenities. Enjoy a restful night's sleep in our plush bedding, and wake up to stunning views of the surrounding landscape.",
-    headerImage: "/images/deluxe-room.jpg",
+    headerImage: "/images/hottub-room.webp",
     images: [
-      { src: "/images/deluxe-room.jpg", alt: "Deluxe Room" },
-      { src: "/images/deluxe-bathroom.jpg", alt: "Deluxe Bathroom" },
-      { src: "/images/balcony.jpg", alt: "Balcony" },
+      { src: "/images/hottub-room.webp", alt: "HotTub Room" },
+      { src: "/images/hottub-bathroom.webp", alt: "HotTub Bathroom" },
+      { src: "/images/hottub-shower.webp", alt: "HotTub Shower" },
     ],
     squareMetersDouble: 35,
     maxOccupancy: 2,
     basePrice: 120,
-    amenities: ["Free Wi-Fi", "Air Conditioning", "Flat-screen TV", "Safe", "Mini Fridge", "Living Area", "Private Hot Tub"]
+    amenities: ["wifi", "fan", "monitor", "vault", "wine", "sofa", "bubbles"]
   },
 ];

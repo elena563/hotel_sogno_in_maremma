@@ -17,8 +17,6 @@
     "confirmed": "Booking confirmed!",
     "confirmMessage": "Thank you! Your request has been received. You will receive a confirmation by email.",
     "back": "Back to home",
-    "starting": "Starting from",
-    "night": "night",
     "form": {
       "name": "Name",
       "namePlaceholder": "Enter your name",
@@ -125,7 +123,36 @@
   "Rooms": {
     "headline": "Hospitality\n above\n all",
     "intro": "Choose your comfort",
-    "text": "Discover our elegant and comfortable rooms, designed to offer you an unforgettable stay."
+    "text": "Discover our elegant and comfortable rooms, designed to offer you an unforgettable stay.",
+    "double": "double",
+    "quadruple": "quadruple",
+    "amenities": {
+      "wifi": "Free Wi-Fi",
+      "fan": "Air conditioning",
+      "monitor": "Flat-screen TV",
+      "vault": "Safe",
+      "wine": "Minibar",
+      "sofa": "Seating area",
+      "bubbles": "Private hot tub"
+    },
+    "starting": "Starting from",
+    "night": "night",
+    "economy": {
+      "name": "Economy Room",
+      "description": "Our Economy Room offers a cozy and comfortable stay with all the essential amenities you need for a relaxing getaway. Perfect for solo travelers or couples, this room provides a budget-friendly option without compromising on quality."
+    },
+    "comfort": {
+      "name": "Comfort Room",
+      "description": "The Comfort Room is designed for those seeking a balance of comfort and style. With modern furnishings and thoughtful amenities, this room provides a welcoming space for relaxation and rejuvenation during your stay."
+    },
+    "deluxe": {
+      "name": "Deluxe Room",
+      "description": "Experience the ultimate in luxury and comfort with our Deluxe Room. Featuring elegant decor, premium amenities, and a spacious layout, this room is perfect for guests looking to indulge in a truly memorable stay."
+    },
+    "hottub": {
+      "name": "Hot Tub Suite",
+      "description": "Our Hot Tub Suite offers a unique and indulgent experience with a private hot tub for ultimate relaxation. Enjoy the soothing waters and unwind in style, making your stay truly unforgettable."
+    }
   },
   "Other": {
     "dates": "Select dates",

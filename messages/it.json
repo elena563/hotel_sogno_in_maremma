@@ -17,8 +17,6 @@
     "confirmed": "Prenotazione confermata!",
     "confirmMessage": "Grazie! La tua richiesta è stata ricevuta. Riceverai una conferma via email.",
     "back": "Torna alla home",
-    "starting": "A partire da",
-    "night": "notte",
     "form": {
       "name": "Nome",
       "namePlaceholder": "Inserisci il tuo nome",
@@ -125,7 +123,36 @@
   "Rooms": {
     "headline": "L'accoglienza\n prima\n di tutto",
     "intro": "Scegli il tuo comfort",
-    "text": "Scopri le nostre camere eleganti e confortevoli, progettate per offrirti un soggiorno indimenticabile."
+    "text": "Scopri le nostre camere eleganti e confortevoli, progettate per offrirti un soggiorno indimenticabile.",
+    "double": "doppia",
+    "quadruple": "quadrupla",
+    "amenities": {
+      "wifi": "Wi-Fi gratuito",
+      "fan": "Aria condizionata",
+      "monitor": "TV a schermo piatto",
+      "vault": "Cassaforte",
+      "wine": "Minibar",
+      "sofa": "Area soggiorno",
+      "bubbles": "Vasca idromassaggio privata"
+    },
+    "starting": "A partire da",
+    "night": "notte",
+    "economy": {
+      "name": "Camera Economy",
+      "description": "La nostra Camera Economy offre un soggiorno accogliente e confortevole con tutti i servizi essenziali per una fuga rilassante. Perfetta per viaggiatori singoli o coppie, questa camera rappresenta un'opzione economica senza compromettere la qualità."
+    },
+    "comfort": {
+      "name": "Camera Comfort",
+      "description": "La Camera Comfort è progettata per offrire un soggiorno piacevole e rilassante, con un arredamento elegante e servizi moderni. Ideale per coppie o famiglie, questa camera garantisce comfort e tranquillità durante il tuo soggiorno."
+    },
+    "deluxe": {
+      "name": "Camera Deluxe",
+      "description": "La Camera Deluxe offre un'esperienza di soggiorno superiore, con spazi più ampi, arredi raffinati e comfort extra. Perfetta per chi cerca un soggiorno lussuoso e indimenticabile, questa camera è la scelta ideale per una vacanza romantica o un viaggio speciale."
+    },
+    "hottub": {
+      "name": "Suite con Vasca Idromassaggio",
+      "description": "La Suite con Vasca Idromassaggio offre un'esperienza unica e indulgente con una vasca idromassaggio privata per un rilassamento totale. Goditi le acque rinfrescanti e rilassati in stile, rendendo il tuo soggiorno davvero indimenticabile."
+    }
   },
   "Other": {
     "dates": "Seleziona le date",
