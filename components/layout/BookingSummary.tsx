@@ -9,7 +9,7 @@ type Props = {
 };
 
 export default function BookingSummary({ search, price, room }: Props) {
-    const t = useTranslations("Booking");
+    const t = useTranslations("");
 
   return (
     <div className="bg-white p-4 rounded-lg shadow-md">
@@ -18,10 +18,10 @@ export default function BookingSummary({ search, price, room }: Props) {
         {search.checkIn.toISOString().split("T")[0]} {t("to")} {search.checkOut.toISOString().split("T")[0]} - {search.adults} {t("adults")}, {search.children} {t("children")}
       </p>
       <p className="text-sm text-muted-foreground">
-        {t("room")}: {room?.name}
+        {t("Booking.room")}: {t(`Rooms.${room.type}.name`)}
       </p>
       <p className="text-lg font-bold">
-        {t("total")}: €{price.toFixed(2)}
+        {t("Booking.total")}: €{price.toFixed(2)}
       </p>
     </div>
   );

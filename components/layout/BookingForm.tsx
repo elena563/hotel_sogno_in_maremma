@@ -1,12 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useTransition } from "react";
 import { format } from "date-fns";
 import type { DateRange } from "react-day-picker";
 
 import { Button } from "@/components/ui/button";
 import { Field, FieldGroup, FieldLabel } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
+import { Spinner } from "@/components/ui/spinner";
 import { DatePickerRange } from "@/components/ui/date-picker";
 import { useTranslations } from "next-intl";
 import { useRouter } from "@/i18n/navigation";
@@ -32,6 +33,13 @@ type BookingFormState = {
 export default function BookingForm() {
   const t = useTranslations("Booking.form");
   const router = useRouter();
+  const boardLabels: Record<Board, string> = {
+    bb: t("boardBb"),
+    half_board: t("boardHalfBoard"),
+    full_board: t("boardFullBoard"),
+  };
+
+  const [isPending, startTransition] = useTransition();
 
   const [formData, setFormData] = useState<BookingFormState>({
     range: undefined,
@@ -51,21 +59,29 @@ export default function BookingForm() {
 
     if (!range?.from || !range.to) return;
 
-    router.push({
-      pathname: "/rooms",
-      query: {
-        checkIn: format(range.from, "yyyy-MM-dd"),
-        checkOut: format(range.to, "yyyy-MM-dd"),
-        adults: String(adults),
-        children: String(children),
-        board,
-      },
+    const checkIn = format(range.from, "yyyy-MM-dd");
+    const checkOut = format(range.to, "yyyy-MM-dd");
+
+    startTransition(() => {
+      router.push(
+        {
+          pathname: "/rooms",
+          query: {
+            checkIn,
+            checkOut,
+            adults: String(adults),
+            children: String(children),
+            board,
+          },
+        },
+        { scroll: false },
+      );
     });
   }
 
   return (
     <form
-      className="w-full flex flex-col gap-4 p-4 bg-primary"
+      className="w-full flex flex-col md:flex-row md:items-end gap-4 md:gap-10 p-4 bg-primary"
       onSubmit={handleSubmit}
     >
       <FieldGroup className="flex-1 md:flex-row items-end">
@@ -81,6 +97,9 @@ export default function BookingForm() {
           <Select
             value={formData.board}
             onValueChange={(board) => handleChange({ board: board as Board })}
+            itemToStringLabel={(value) =>
+              boardLabels[value as Board] ?? String(value)
+            }
           >
             <SelectTrigger className="w-full">
               <SelectValue placeholder={t("boardPlaceholder")} />
@@ -115,8 +134,13 @@ export default function BookingForm() {
           />
         </Field>
       </FieldGroup>
-      <Button type="submit" variant="default" className="w-full max-w-48">
-        {t("search")}
+      <Button
+        type="submit"
+        variant="default"
+        className="w-full max-w-48"
+        disabled={isPending}
+      >
+        {isPending ? <Spinner className="size-5" /> : t("search")}
       </Button>
     </form>
   );

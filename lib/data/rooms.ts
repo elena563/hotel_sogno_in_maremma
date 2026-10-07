@@ -10,6 +10,7 @@ export interface Room {
   maxOccupancy?: number;
   basePrice: number;
   amenities?: string[];
+  units: number | 1;
 }
 
 export const rooms: Room[] = [
@@ -26,7 +27,8 @@ export const rooms: Room[] = [
     squareMetersQuadruple: 35,
     maxOccupancy: 4,
     basePrice: 69,
-    amenities: ["wifi", "fan", "monitor", "vault", "wine"]
+    amenities: ["wifi", "fan", "monitor", "vault", "wine"],
+    units: 4,
   },
   {
     id: 2,
@@ -41,7 +43,8 @@ export const rooms: Room[] = [
     squareMetersQuadruple: 40,
     maxOccupancy: 4,
     basePrice: 85,
-    amenities: ["wifi", "fan", "monitor", "vault", "wine"]
+    amenities: ["wifi", "fan", "monitor", "vault", "wine"],
+    units: 3,
   },
   {
     id: 3,
@@ -56,7 +59,8 @@ export const rooms: Room[] = [
     squareMetersQuadruple: 55,
     maxOccupancy: 4,
     basePrice: 102,
-    amenities: ["wifi", "fan", "monitor", "vault", "wine", "sofa"]
+    amenities: ["wifi", "fan", "monitor", "vault", "wine", "sofa"],
+    units: 3,
   },
   {
     id: 4,
@@ -70,6 +74,7 @@ export const rooms: Room[] = [
     squareMetersDouble: 35,
     maxOccupancy: 2,
     basePrice: 120,
-    amenities: ["wifi", "fan", "monitor", "vault", "wine", "sofa", "bubbles"]
+    amenities: ["wifi", "fan", "monitor", "vault", "wine", "sofa", "bubbles"],
+    units: 2,
   },
 ];

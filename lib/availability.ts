@@ -23,9 +23,14 @@ export async function getAvailableRooms(
       ne(booking.status, "cancelled"),
     ));
 
-  const booked = new Set(rows.map((r) => r.room));
+  const counts = new Map<string, number>();
+  for (const row of rows) {
+    counts.set(row.room, (counts.get(row.room) ?? 0) + 1);
+  }
 
   return rooms.filter(
-    (room) => (room.maxOccupancy ?? 2) >= nGuests && !booked.has(room.type),
+    (room) =>
+      (room.maxOccupancy ?? 2) >= nGuests &&
+      (room.units ?? 1) > (counts.get(room.type) ?? 0),
   );
 }
