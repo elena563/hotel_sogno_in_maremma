@@ -21,7 +21,7 @@ export default async function RoomsPage({ searchParams }: Props) {
         : rooms;
 
     return (
-        <div className="flex flex-col flex-1 items-center justify-center bg-background font-serif">
+        <div className="w-full flex flex-col flex-1 items-center justify-center bg-background font-serif">
             <section className="relative h-[80vh]">
             <Image
                 src="/images/hero-rooms.webp"
@@ -30,8 +30,8 @@ export default async function RoomsPage({ searchParams }: Props) {
                 priority
                 className="object-cover object-center"
             />
-            <div className="absolute top-1/4 left-0 p-6 m-6 z-10 flex flex-col gap-6 items-start justify-end md:max-w-lg">
-                <h1 className="text-5xl font-heading font-bold whitespace-pre-line leading-snug p-4 bg-surface/40 md:bg-transparent">
+            <div className="absolute top-1/4 left-0 sm:p-6 m-6 z-10 flex flex-col gap-6 items-start justify-end md:max-w-lg">
+                <h1 className="text-4xl sm:text-5xl font-heading font-bold whitespace-pre-line leading-snug p-4 bg-surface/40 md:bg-transparent">
                 {t("Rooms.headline")}
                 </h1>
             </div>

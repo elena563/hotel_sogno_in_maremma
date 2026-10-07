@@ -1,10 +1,12 @@
-import { Link } from "@/i18n/navigation";
 import { eq } from "drizzle-orm";
 import { redirect } from "next/navigation";
+import { getTranslations } from "next-intl/server";
+import { CircleCheckBig } from "lucide-react";
+
+import { Link } from "@/i18n/navigation";
 import { db } from "@/db/db";
 import { booking } from "@/db/schema";
 import BookingSummary from "@/components/layout/BookingSummary";
-import { getTranslations } from "next-intl/server";
 import { buttonVariants } from "@/components/ui/button";
 import { rooms } from "@/lib/data/rooms";
 
@@ -24,10 +26,12 @@ export default async function ConfirmedPage({ searchParams }: Props) {
 
     const room = rooms.find(r => r.type === reservation.room);
     if (!room) redirect("/");
+
   return (
-    <main>
-      <h2>{t("confirmed")}</h2>
-      <p>{t("confirmMessage")}</p>
+    <div className="flex flex-col items-center gap-10 min-h-screen py-12 w-[min(100%-2rem,72rem)] mx-auto">
+      <CircleCheckBig className="mx-auto w-16 h-16 text-secondary" />
+      <h2 className="text-3xl font-bold font-heading text-center text-secondary">{t("confirmed")}</h2>
+      <p className="text-center">{t("confirmMessage")}</p>
       <BookingSummary 
         search={{
             checkIn: reservation.checkIn,
@@ -43,6 +47,6 @@ export default async function ConfirmedPage({ searchParams }: Props) {
         <Link href="/" className={buttonVariants({ variant: "default" })}>
               {t("back")}
           </Link>
-    </main>
+    </div>
   );
 }

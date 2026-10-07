@@ -19,7 +19,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="relative w-full bg-primary text-surface">
+    <header className="relative z-50 w-full bg-primary text-surface">
       <div className="flex w-full items-center justify-between gap-8 p-4">
         <Logo className="w-[170px] md:w-[300px]" />
         <div className="flex items-center gap-4 md:hidden">
@@ -78,7 +78,7 @@ export default function Header() {
       <nav
         id="mobile-nav"
         aria-hidden={!open}
-        className={`absolute top-full left-0 right-0 flex flex-col gap-2 overflow-hidden bg-primary px-4 pb-4 transition-all duration-500 ease-in-out md:hidden ${
+        className={`absolute top-full left-0 right-0 z-50 flex flex-col gap-2 overflow-hidden bg-primary px-4 pb-4 transition-all duration-500 ease-in-out md:hidden ${
           open ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
         }`}
       >

@@ -80,5 +80,5 @@ export async function createBooking(
     price,
   }).returning({ id: booking.id });
 
-  redirect(`/booking/confirmed?id=${inserted.id}`);
+  redirect(`/booking/confirm?id=${inserted.id}`);
 }

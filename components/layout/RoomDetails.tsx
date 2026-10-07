@@ -30,9 +30,9 @@ const amenities: Record<string, LucideIcon> = {
 export default function RoomDetails({ room, search, type, price }: RoomDetailsProps) {
   const t = useTranslations("");
   return (
-    <div className="w-full justify-between flex flex-col md:flex-row gap-2 p-4 bg-surface !mt-4">
-      <div className={`flex flex-col gap-4 w-full ${type === 'quote' ? 'md:flex-row md:gap-8' : 'md:gap-4'}`}>
-        <div className={`flex flex-col w-full ${type === 'gallery' ? 'gap-2 md:flex-row' : ''}`}>
+    <div className={`min-w-0 w-full justify-between flex flex-col md:flex-row gap-2 p-4 bg-surface ${type === 'quote' ? '!mt-4' : ''}`}>
+      <div className={`min-w-0 flex-1 flex flex-col gap-4 ${type === 'quote' ? 'md:flex-row md:gap-8' : 'md:gap-4'}`}>
+        <div className={`min-w-0 flex-1 flex flex-col ${type === 'gallery' ? 'gap-2 md:flex-row' : ''}`}>
           <div>
             <h3 className="text-secondary w-full font-heading font-semibold text-xl">
               {t(`Rooms.${room.type}.name`)}
@@ -59,7 +59,7 @@ export default function RoomDetails({ room, search, type, price }: RoomDetailsPr
                 return (
                   <li key={key} className="text-sm mb-1 flex items-center gap-2">
                     <Icon className="w-5 h-5 text-secondary" />
-                    <span className="text-nowrap">{t(`Rooms.amenities.${key}`)}</span>
+                    <span className="md:text-nowrap">{t(`Rooms.amenities.${key}`)}</span>
                   </li>
                 );
               })}
@@ -103,14 +103,14 @@ export default function RoomDetails({ room, search, type, price }: RoomDetailsPr
       {type === "gallery" ? (
         <ImageCarousel
           images={room.images}
-          className="max-w-[12rem] sm:max-w-xs h-full"
+          className="w-full sm:max-w-[12rem] sm:max-w-xs h-full"
           sizes="(min-width: 640px) 320px, 192px"
         />
       ) : (
         <Image
           src={room.headerImage}
           alt={t(`Rooms.${room.type}.name`)}
-          className="max-w-[12rem] sm:max-w-xs object-cover object-center"
+          className="shrink-0 max-w-[12rem] sm:max-w-xs object-cover object-center"
           width={320}
           height={240}
         />

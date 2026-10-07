@@ -11,7 +11,7 @@ type RoomsBookingProps = {
 
 export default function RoomsBooking({ rooms, search }: RoomsBookingProps) {
   return (
-    <div id="room-booking" className="w-full w-[min(100%-2rem,72rem)]">
+    <div id="room-booking" className="w-[calc(100%-2rem)] max-w-6xl mx-auto">
         <BookingCTA type="form" />
 
         {rooms.map((room) => (

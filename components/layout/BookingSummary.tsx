@@ -16,19 +16,22 @@ type Props = {
 export default function BookingSummary({ search, price, room }: Props) {
     const t = useTranslations("");
 
-    const backQuery = {
+    const backQuery: Record<string, string> = {
     checkIn: format(search.checkIn, "yyyy-MM-dd"),
     checkOut: format(search.checkOut, "yyyy-MM-dd"),
     adults: String(search.adults),
     children: String(search.children),
     board: search.board,
-    room: search.room,
-  };
+    };
+    if (search.room) {
+      backQuery.room = search.room;
+    }
+    const backHref = `/rooms?${new URLSearchParams(backQuery).toString()}#room-booking`;
 
   return (
-    <div className="w-full bg-white p-8 rounded-lg shadow-md">
+    <div className="w-full bg-surface p-8 rounded-lg shadow-md">
       <h2 className="text-2xl font-semibold font-heading mb-6 text-center">{t("Booking.summary")}</h2>
-      <div className="flex flex-col md:flex-row-reverse justify-between md:flex-row gap-4">
+      <div className="flex flex-col md:flex-row-reverse justify-between items-center gap-4">
         <Image
             src={room.headerImage}
             alt={t(`Rooms.${room.type}.name`)}
@@ -37,10 +40,10 @@ export default function BookingSummary({ search, price, room }: Props) {
             height={200}
           />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-          <p className="text-xl text-secondary font-heading font-semibold col-span-2">
+          <p className="text-xl text-secondary font-heading font-semibold col-span-1 md:col-span-2">
               {t(`Rooms.${room.type}.name`)}
             </p>
-            <p className="text-muted-foreground col-span-2">
+            <p className="text-muted-foreground col-span-1 md:col-span-2">
               {t(`Booking.form.${search.board}`)}
             </p>
             <p className="text-muted-foreground">
@@ -49,7 +52,7 @@ export default function BookingSummary({ search, price, room }: Props) {
             <p className="text-muted-foreground">
               <span className="font-semibold">{t("Booking.checkout")}:</span> {search.checkOut.toISOString().split("T")[0]}
             </p>
-            <p className="text-muted-foreground col-span-2">
+            <p className="text-muted-foreground col-span-1 md:col-span-2">
               {search.adults} {t("Booking.adults")}
               {search.children > 0 && (
                 <span>
@@ -58,11 +61,11 @@ export default function BookingSummary({ search, price, room }: Props) {
               )}
             </p>
             
-            <p className="text-lg font-bold col-span-2">
+            <p className="text-lg font-bold col-span-1 md:col-span-2">
               {t("Booking.total")}: €{price.toFixed(2)}
             </p>
             <Link
-              href={{ pathname: "/rooms#room-booking", query: backQuery }}
+              href={backHref}
               className={buttonVariants({ variant: "outline" })}
             >
               {t("Booking.backToRooms")}
