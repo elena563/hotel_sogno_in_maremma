@@ -33,7 +33,9 @@
       "children": "Bambini",
       "terms": "Accetto i termini e le condizioni",
       "search": "Cerca disponibilità",
-      "confirm": "Conferma prenotazione"
+      "confirm": "Conferma prenotazione",
+      "errorInvalid": "Controlla i dati inseriti e riprova.",
+      "errorUnavailable": "La camera selezionata non è più disponibile per le date scelte."
     }
   },
   "LanguageButton": {

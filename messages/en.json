@@ -32,7 +32,9 @@
       "children": "Children",
       "terms": "I accept the terms and conditions",
       "search": "Search availability",
-      "confirm": "Confirm booking"
+      "confirm": "Confirm booking",
+      "errorInvalid": "Check the entered data and try again.",
+      "errorUnavailable": "The selected room is no longer available for the chosen dates."
     }
   },
   "LanguageButton": {

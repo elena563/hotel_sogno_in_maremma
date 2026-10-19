@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Field, FieldGroup, FieldLabel } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
+import { Spinner } from "@/components/ui/spinner";
 import { createBooking } from "@/lib/booking";
 import type { BookingSearch } from "@/lib/types";
 import { useTranslations } from "next-intl";
@@ -41,8 +42,18 @@ export default function ConfirmForm({ search }: { search: BookingSearch }) {
         <input type="hidden" name="children" value={search.children} />
         <input type="hidden" name="board" value={search.board} />
         <input type="hidden" name="room" value={search.room} />
-        <Button type="submit" variant="default" className="w-full max-w-48">
-          {t("confirm")}
+        {state.status === "error" && (
+          <p role="alert" className="text-sm font-medium text-primary-foreground">
+            {state.reason === "invalid" ? t("errorInvalid") : t("errorUnavailable")}
+          </p>
+        )}
+        <Button
+          type="submit"
+          variant="default"
+          className="w-full max-w-48"
+          disabled={isPending}
+        >
+          {isPending ? <Spinner className="size-5" /> : t("confirm")}
         </Button>
       </form>
     )

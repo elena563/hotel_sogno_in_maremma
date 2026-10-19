@@ -9,7 +9,7 @@ import { getAvailableRooms } from "@/lib/availability";
 import { toLocalDate } from "@/lib/booking-search";
 import { rooms } from "@/lib/data/rooms";
 import { ROOM_TYPES, BOARD_VALUES } from "@/lib/types";
-import { calculateTotalPrice, type Board } from "@/lib/pricing";
+import { calculateTotalPrice } from "@/lib/pricing";
 
 
 const bookingSchema = z.object({

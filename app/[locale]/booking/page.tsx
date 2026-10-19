@@ -4,7 +4,6 @@ import { parseBookingSearch } from "@/lib/booking-search";
 import { getAvailableRooms } from "@/lib/availability";
 import { rooms } from "@/lib/data/rooms";
 import { calculateTotalPrice } from "@/lib/pricing";
-import { getTranslations } from "next-intl/server";
 import ConfirmForm from "@/components/layout/ConfirmForm";
 import BookingSummary from "@/components/layout/BookingSummary";
 
@@ -13,7 +12,6 @@ type Props = {
 };
 
 export default async function BookingPage({ searchParams }: Props) {
-    const t = await getTranslations("Booking");
     const search = parseBookingSearch(await searchParams);
   if (!search) redirect("/rooms");
   if (!search.room) redirect("/rooms");
