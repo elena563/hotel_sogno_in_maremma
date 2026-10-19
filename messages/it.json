@@ -38,6 +38,58 @@
       "errorUnavailable": "La camera selezionata non è più disponibile per le date scelte."
     }
   },
+  "Admin": {
+    "title": "Pannello amministrazione",
+    "subtitle": "Gestione prenotazioni dell'hotel",
+    "kpiBookings": "Prenotazioni questo mese",
+    "kpiRevenue": "Ricavi mese corrente",
+    "kpiPending": "Prenotazioni in attesa",
+    "chartTitle": "Ricavi ultimi 12 mesi",
+    "revenueLabel": "Ricavi",
+    "tableTitle": "Prenotazioni",
+    "guest": "Ospite",
+    "checkIn": "Check-in",
+    "checkOut": "Check-out",
+    "room": "Camera",
+    "board": "Pensione",
+    "price": "Prezzo",
+    "status": "Stato",
+    "empty": "Nessuna prenotazione",
+    "pageInfo": "Pagina {page} di {totalPages} - {total} prenotazioni",
+    "prev": "Precedente",
+    "next": "Successiva",
+    "statuses": {
+      "pending": "In attesa",
+      "confirmed": "Confermata",
+      "completed": "Completata",
+      "cancelled": "Annullata"
+    },
+    "rooms": {
+      "economy": "Economy",
+      "comfort": "Comfort",
+      "deluxe": "Deluxe",
+      "hottub": "HotTub"
+    },
+    "boards": {
+      "bb": "Bed and breakfast",
+      "half_board": "Mezza pensione",
+      "full_board": "Pensione intera"
+    },
+    "months": {
+      "jan": "gen",
+      "feb": "feb",
+      "mar": "mar",
+      "apr": "apr",
+      "may": "mag",
+      "jun": "giu",
+      "jul": "lug",
+      "aug": "ago",
+      "sep": "set",
+      "oct": "ott",
+      "nov": "nov",
+      "dec": "dic"
+    }
+  },
   "LanguageButton": {
     "switchToIt": "Passa a italiano",
     "switchToEn": "Passa a inglese"

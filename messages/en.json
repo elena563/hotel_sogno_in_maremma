@@ -37,6 +37,58 @@
       "errorUnavailable": "The selected room is no longer available for the chosen dates."
     }
   },
+  "Admin": {
+    "title": "Admin panel",
+    "subtitle": "Hotel booking management",
+    "kpiBookings": "Bookings this month",
+    "kpiRevenue": "Revenue this month",
+    "kpiPending": "Pending bookings",
+    "chartTitle": "Revenue - last 12 months",
+    "revenueLabel": "Revenue",
+    "tableTitle": "Bookings",
+    "guest": "Guest",
+    "checkIn": "Check-in",
+    "checkOut": "Check-out",
+    "room": "Room",
+    "board": "Board",
+    "price": "Price",
+    "status": "Status",
+    "empty": "No bookings found",
+    "pageInfo": "Page {page} of {totalPages} - {total} bookings",
+    "prev": "Previous",
+    "next": "Next",
+    "statuses": {
+      "pending": "Pending",
+      "confirmed": "Confirmed",
+      "completed": "Completed",
+      "cancelled": "Cancelled"
+    },
+    "rooms": {
+      "economy": "Economy",
+      "comfort": "Comfort",
+      "deluxe": "Deluxe",
+      "hottub": "HotTub"
+    },
+    "boards": {
+      "bb": "Bed and breakfast",
+      "half_board": "Half board",
+      "full_board": "Full board"
+    },
+    "months": {
+      "jan": "Jan",
+      "feb": "Feb",
+      "mar": "Mar",
+      "apr": "Apr",
+      "may": "May",
+      "jun": "Jun",
+      "jul": "Jul",
+      "aug": "Aug",
+      "sep": "Sep",
+      "oct": "Oct",
+      "nov": "Nov",
+      "dec": "Dec"
+    }
+  },
   "LanguageButton": {
     "switchToIt": "Switch to Italian",
     "switchToEn": "Switch to English"
