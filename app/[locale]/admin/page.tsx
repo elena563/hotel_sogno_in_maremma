@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
 import { db } from "@/db/db";
-import { booking, boardType, bookingStatus, roomType } from "@/db/schema";
+import { booking, bookingStatus } from "@/db/schema";
 import RevenueChart from "@/components/layout/RevenueChart";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";

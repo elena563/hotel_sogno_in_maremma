@@ -10,6 +10,7 @@ import { toLocalDate } from "@/lib/booking-search";
 import { rooms } from "@/lib/data/rooms";
 import { ROOM_TYPES, BOARD_VALUES } from "@/lib/types";
 import { calculateTotalPrice } from "@/lib/pricing";
+import { sendBookingConfirmation } from "@/lib/email";
 
 
 const bookingSchema = z.object({
@@ -21,11 +22,16 @@ const bookingSchema = z.object({
   children: z.coerce.number().int().min(0).max(20),
   room: z.enum(ROOM_TYPES),
   board: z.enum(BOARD_VALUES),
+  locale: z.enum(["it", "en"]),
 });
 
 export type BookingState =
   | { status: "idle" }
-  | { status: "error"; reason: "invalid" | "unavailable"; fields: { name: string; email: string } }
+  | {
+      status: "error";
+      reason: "invalid" | "unavailable" | "terms" | "server";
+      fields: { name: string; email: string };
+    }
 
 function readFields(fd: FormData) {
   return {
@@ -42,7 +48,11 @@ export async function createBooking(
 
   if (!parsed.success) return { status: "error", reason: "invalid", fields: readFields(formData) };
 
-  const { name, email, adults, children, room: roomType, board } = parsed.data;
+  const { name, email, adults, children, room: roomType, board, locale } = parsed.data;
+
+  if (formData.get("terms-checkbox") !== "on") {
+    return { status: "error", reason: "terms", fields: { name, email } };
+  }
 
   const checkIn = toLocalDate(parsed.data.checkIn);
   const checkOut = toLocalDate(parsed.data.checkOut);
@@ -53,32 +63,62 @@ export async function createBooking(
 
   if (!room) return { status: "error", reason: "invalid", fields: { name, email } };
 
-  const stillAvailable = await getAvailableRooms(
-    rooms,
-    adults + children,
-    checkIn,
-    checkOut,
-  );
-
-  if (!stillAvailable.some((candidate) => candidate.type === roomType)) {
-    return { status: "error", reason: "unavailable", fields: { name, email } };
-  }
-
   const price = Math.round(
     calculateTotalPrice(room, adults, children, board, checkIn, checkOut),
   );
 
-  const [inserted] = await db.insert(booking).values({
-    name,
-    email,
-    adults,
-    children,
-    checkIn,
-    checkOut,
-    room: roomType,
-    board,
-    price,
-  }).returning({ id: booking.id });
+  let insertedId: number | undefined;
 
-  redirect(`/booking/confirm?id=${inserted.id}`);
+  try {
+    const stillAvailable = await getAvailableRooms(
+      rooms,
+      adults + children,
+      checkIn,
+      checkOut,
+    );
+
+    if (!stillAvailable.some((candidate) => candidate.type === roomType)) {
+      return { status: "error", reason: "unavailable", fields: { name, email } };
+    }
+
+    const [inserted] = await db.insert(booking).values({
+      name,
+      email,
+      adults,
+      children,
+      checkIn,
+      checkOut,
+      room: roomType,
+      board,
+      price,
+    }).returning({ id: booking.id });
+
+    insertedId = inserted?.id;
+  } catch (error) {
+    console.error("Failed to create booking:", error);
+    return { status: "error", reason: "server", fields: { name, email } };
+  }
+
+  if (insertedId === undefined) {
+    return { status: "error", reason: "server", fields: { name, email } };
+  }
+
+  try {
+    await sendBookingConfirmation({
+      name,
+      email,
+      checkIn,
+      checkOut,
+      adults,
+      children,
+      room: roomType,
+      board,
+      price,
+      locale,
+    });
+  } catch (error) {
+    console.error("Failed to send booking confirmation email:", error);
+  }
+
+  redirect(`/booking/confirm?id=${insertedId}`);
 }

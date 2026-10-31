@@ -35,7 +35,9 @@
       "search": "Cerca disponibilità",
       "confirm": "Conferma prenotazione",
       "errorInvalid": "Controlla i dati inseriti e riprova.",
-      "errorUnavailable": "La camera selezionata non è più disponibile per le date scelte."
+      "errorUnavailable": "La camera selezionata non è più disponibile per le date scelte.",
+      "errorTerms": "Devi accettare i termini e le condizioni.",
+      "errorServer": "Si è verificato un errore. Riprova più tardi."
     }
   },
   "Admin": {

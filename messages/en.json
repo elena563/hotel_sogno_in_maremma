@@ -9,6 +9,8 @@
     "ctaButton": "Book now",
     "price": "Total price",
     "summary": "Your booking summary",
+    "checkin": "Check-in",
+    "checkout": "Check-out",
     "to": "to",
     "adults": "adults",
     "children": "children",
@@ -34,7 +36,9 @@
       "search": "Search availability",
       "confirm": "Confirm booking",
       "errorInvalid": "Check the entered data and try again.",
-      "errorUnavailable": "The selected room is no longer available for the chosen dates."
+      "errorUnavailable": "The selected room is no longer available for the chosen dates.",
+      "errorTerms": "You must accept the terms and conditions.",
+      "errorServer": "Something went wrong. Please try again later."
     }
   },
   "Admin": {

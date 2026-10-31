@@ -10,12 +10,19 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Spinner } from "@/components/ui/spinner";
 import { createBooking } from "@/lib/booking";
 import type { BookingSearch } from "@/lib/types";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 
 export default function ConfirmForm({ search }: { search: BookingSearch }) {
     const t = useTranslations("Booking.form");
+    const locale = useLocale() === "en" ? "en" : "it";
     const [state, formAction, isPending] = useActionState(createBooking, { status: "idle" });
+    const errorMessages = {
+      invalid: t("errorInvalid"),
+      unavailable: t("errorUnavailable"),
+      terms: t("errorTerms"),
+      server: t("errorServer"),
+    };
 
     return (
       <form
@@ -42,9 +49,10 @@ export default function ConfirmForm({ search }: { search: BookingSearch }) {
         <input type="hidden" name="children" value={search.children} />
         <input type="hidden" name="board" value={search.board} />
         <input type="hidden" name="room" value={search.room} />
+        <input type="hidden" name="locale" value={locale} />
         {state.status === "error" && (
-          <p role="alert" className="text-sm font-medium text-primary-foreground">
-            {state.reason === "invalid" ? t("errorInvalid") : t("errorUnavailable")}
+          <p role="alert" className="text-sm font-medium text-destructive bg-surface/90 py-2 px-3 rounded-md">
+            {errorMessages[state.reason]}
           </p>
         )}
         <Button
