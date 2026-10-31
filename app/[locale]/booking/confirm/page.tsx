@@ -16,11 +16,12 @@ type Props = {
 
 export default async function ConfirmedPage({ searchParams }: Props) {
     const t = await getTranslations("Booking");
-    const { id } = await searchParams;
+    const { token } = await searchParams;
+    const tokenValue = typeof token === "string" ? token : Array.isArray(token) ? token[0] : undefined;
     const [reservation] = await db
     .select()
     .from(booking)
-    .where(eq(booking.id, Number(id)));
+    .where(eq(booking.publicToken, tokenValue ?? ""));
 
     if (!reservation) redirect("/");
 

@@ -2,6 +2,7 @@
 
 import { z } from "zod";
 import { redirect } from "next/navigation";
+import { randomUUID } from "crypto";
 
 import { db } from "@/db/db";
 import { booking } from "@/db/schema";
@@ -68,35 +69,55 @@ export async function createBooking(
   );
 
   let insertedId: number | undefined;
+  let insertedToken: string | null = null;
 
-  try {
-    const stillAvailable = await getAvailableRooms(
-      rooms,
-      adults + children,
-      checkIn,
-      checkOut,
-    );
+  let attempts = 0;
+  const maxAttempts = 3;
 
-    if (!stillAvailable.some((candidate) => candidate.type === roomType)) {
-      return { status: "error", reason: "unavailable", fields: { name, email } };
+  while (attempts < maxAttempts) {
+    attempts++;
+    try {
+      await db.transaction(async (tx) => {
+        const stillAvailable = await getAvailableRooms(
+          rooms,
+          adults + children,
+          checkIn,
+          checkOut,
+          tx,
+        );
+
+        if (!stillAvailable.some((candidate) => candidate.type === roomType)) {
+          throw new Error("UNAVAILABLE");
+        }
+
+        const publicToken = randomUUID();
+    const [inserted] = await tx.insert(booking).values({
+          name,
+          email,
+          adults,
+          children,
+          checkIn,
+          checkOut,
+          room: roomType,
+          board,
+          price,
+          publicToken,
+        }).returning({ id: booking.id, publicToken: booking.publicToken });
+
+        insertedId = inserted?.id;
+    insertedToken = inserted?.publicToken;
+      }, { isolationLevel: "serializable" });
+      break;
+    } catch (error: any) {
+      if (error?.message === "UNAVAILABLE") {
+        return { status: "error", reason: "unavailable", fields: { name, email } };
+      }
+      if (error?.code === "40001" && attempts < maxAttempts) {
+        continue;
+      }
+      console.error("Failed to create booking:", error);
+      return { status: "error", reason: "server", fields: { name, email } };
     }
-
-    const [inserted] = await db.insert(booking).values({
-      name,
-      email,
-      adults,
-      children,
-      checkIn,
-      checkOut,
-      room: roomType,
-      board,
-      price,
-    }).returning({ id: booking.id });
-
-    insertedId = inserted?.id;
-  } catch (error) {
-    console.error("Failed to create booking:", error);
-    return { status: "error", reason: "server", fields: { name, email } };
   }
 
   if (insertedId === undefined) {
@@ -120,5 +141,5 @@ export async function createBooking(
     console.error("Failed to send booking confirmation email:", error);
   }
 
-  redirect(`/booking/confirm?id=${insertedId}`);
+  redirect(`/booking/confirm?token=${insertedToken ?? ""}`);
 }

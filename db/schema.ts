@@ -18,4 +18,5 @@ export const booking = pgTable("bookings", {
     board: boardType("board").notNull(),
     status: bookingStatus("status").default("pending").notNull(),
   deleted: boolean("deleted").default(false).notNull(),
+  publicToken: text("public_token").unique(),
 });

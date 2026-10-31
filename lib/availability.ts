@@ -12,8 +12,9 @@ export async function getAvailableRooms(
   nGuests: number,
   checkIn: Date,
   checkOut: Date,
+  client: any = db,
 ): Promise<Room[]> {
-  const rows = await db
+  const rows = await client
     .select({ room: booking.room })
     .from(booking)
     .where(and(
