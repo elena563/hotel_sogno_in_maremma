@@ -102,6 +102,7 @@ export async function createBooking(
           board,
           price,
           publicToken,
+          source: "ui",
         }).returning({ id: booking.id, publicToken: booking.publicToken });
 
         insertedId = inserted?.id;

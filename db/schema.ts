@@ -1,4 +1,4 @@
-import { integer, text, boolean, date, pgTable, pgEnum } from "drizzle-orm/pg-core";
+import { integer, text, boolean, date, timestamp, pgTable, pgEnum } from "drizzle-orm/pg-core";
 
 export const boardType = pgEnum("board_type", ["bb", "half_board", "full_board"]);
 export const season = pgEnum("season", ["low", "middle", "high"]);
@@ -19,4 +19,6 @@ export const booking = pgTable("bookings", {
     status: bookingStatus("status").default("pending").notNull(),
   deleted: boolean("deleted").default(false).notNull(),
   publicToken: text("public_token").unique(),
+  source: text("source").default("ui").notNull(),
+  createdAt: timestamp("created_at", { withTimezone: true }).defaultNow().notNull(),
 });

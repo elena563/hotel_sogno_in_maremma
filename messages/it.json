@@ -234,11 +234,11 @@
     },
     "bookings": {
       "title": "Dati delle prenotazioni",
-      "text": "I dati inseriti nel modulo di prenotazione (nome, indirizzo email, periodo e composizione del soggiorno) vengono memorizzati temporaneamente al solo scopo di poter essere visualizzati nell'area amministrativa. Sono conservati per un massimo di 30 giorni dalla richiesta e poi cancellati automaticamente. Non vengono ceduti a terzi né utilizzati per finalità di marketing."
+      "text": "I dati inseriti nel modulo di prenotazione (nome, indirizzo email, periodo e composizione del soggiorno) vengono memorizzati temporaneamente al solo scopo di poter essere visualizzati nell'area amministrativa. Sono conservati per un massimo di 30 giorni dalla richiesta; la cancellazione automatica avviene entro 60 giorni. Non vengono ceduti a terzi né utilizzati per finalità di marketing."
     },
     "advice": {
       "title": "Un consiglio",
-      "text": "Poiché si tratta di un progetto didattico, ti chiediamo di usare dati fittizi. Inserisci un nome di fantasia e un indirizzo email inesistente, e non condividere informazioni personali reali.\n Questo progetto prevede anche la conferma via email, quindi inserisci un indirizzo valido per poterla visualizzare. Non è obbligatorio e l'indirizzo inviato non viene memorizzato e viene cancellato dopo 30 giorni."
+      "text": "Poiché si tratta di un progetto didattico, ti chiediamo di usare dati fittizi. Inserisci un nome di fantasia e un indirizzo email inesistente, e non condividere informazioni personali reali.\n Questo progetto prevede anche la conferma via email, quindi inserisci un indirizzo valido per poterla visualizzare. Non è obbligatorio e l'indirizzo inviato non viene memorizzato e viene cancellato dopo 30 giorni (entro 60 giorni dalla richiesta)."
     },
     "updated": "Ultimo aggiornamento: ottobre 2026"
   },

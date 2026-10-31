@@ -1,6 +1,6 @@
 # Hotel Sogno in Maremma
 
-This is one of my very first little frontend development projects, realized in 2023. Now it has its proper repository, UI adjustments and upgrades for it are coming soon.
+This is one of my very first little frontend development projects, realized in 2023. It has evolved with a full booking flow (email confirmation, token references, atomic transactions), server-side validation, a monthly data cleanup, and bilingual support.
 
 ## Project Description
 
@@ -11,13 +11,16 @@ Project sections
 
 - Header with responsive navigation menu
 - Homepage: hero section, booking section preview, services list and description
-- Rooms and booking: detailed information about the four room types, booking section with price calculator and booking form
+- Rooms and booking: detailed information about the four room types, interactive booking with real-time pricing, confirmation by email, token-based reference links, server-side validation and atomic DB transactions.
 - Footer with contacting info, social media icons and location map
+- Admin area: a private section for the hotel staff to view booking data, revenue charts and manage bookings.
 
 ## User Interface Preview
 
 1. Explore the user interface online by clicking on the related button in the portfolio section of [my personal website](https://elenazen.it/).
 2. Navigate through different sections of the site to experience its implemented features.
+3. **Booking preview**: Go to `/rooms`, pick dates and a room, then complete the form. You'll get an email confirmation with a unique token link (`/booking/confirm?token=...`). Safe, no sequential IDs exposed, with server-side validation and atomic DB transactions backing every reservation.
+4. **Admin area**: Access the admin section at `/admin` to view booking data, revenue charts, and manage bookings. Please note that this area is protected, but can be accessed, as it is a portfolio project with the following demo credentials. user: admin / psw: hotel-admin.
 
 ## Code Exploration on GitHub
 
@@ -31,7 +34,7 @@ Project sections
 - **Responsive Design**: Ensures a seamless experience across various devices.
 - **Photo Gallery**: Captivating images showcasing the beauty of the hotel and its exclusive services.
 - **Room Information**: Animated section with details about four room types available.
-- **Booking section**: Interactive booking form with date selection, number of guests, and board type. Prices are automatically calculated based on user input.
+- **Booking section**: Interactive booking form with date selection, number of guests, and board type. Prices are automatically calculated based on user input. Includes confirmation by email, token-based reference, server-side validation, and atomic transaction booking.
 - **Contact and Location**: Information for easy communication and an interactive map for location.
 
 ## Technologies Used & Design Features
@@ -45,7 +48,6 @@ Project sections
 [![Neon](https://img.shields.io/badge/Neon-34D59A?style=flat&logo=neon&logoColor=white)](https://neon.tech/)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white)](https://www.postgresql.org/)  
 [![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=white)](https://vercel.com/)  
-[![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=flat&logo=framer&logoColor=white)](https://www.framer.com/motion/)
 
 Internationalization: next-intl (Italian and English languages available)
 

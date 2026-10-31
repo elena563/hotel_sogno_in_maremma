@@ -235,11 +235,11 @@
     },
     "bookings": {
       "title": "Booking data",
-      "text": "The data entered in the booking form (name, email address, stay dates and party size) is stored temporarily for the sole purpose of being displayed in the admin area. It is kept for a maximum of 30 days from the request and is then automatically deleted. It is not shared with third parties nor used for marketing purposes."
+      "text": "The data entered in the booking form (name, email address, stay dates and party size) is stored temporarily for the sole purpose of being displayed in the admin area. It is kept for a maximum of 30 days from the request; automatic deletion occurs within 60 days. It is not shared with third parties nor used for marketing purposes."
     },
     "advice": {
       "title": "A suggestion",
-      "text": "Since this is an educational project, please use dummy data. Enter a made-up name and a non-existent email address, and do not share any real personal information.\n The project also includes email confirmation, so insert a valid email address to see it. This is not mandatory and the sent address is not stored and deleted after 30 days."
+      "text": "Since this is an educational project, please use dummy data. Enter a made-up name and a non-existent email address, and do not share any real personal information.\n The project also includes email confirmation, so insert a valid email address to see it. This is not mandatory and the sent address is not stored and deleted after 30 days (within 60 days from the request)."
     },
     "updated": "Last updated: October 2026"
   },

@@ -74,6 +74,8 @@ async function main() {
       price,
       board: row.board,
       status: row.status,
+      source: "seed",
+      createdAt: new Date(Date.now() - (row.daysAgo ?? 0) * 86400000),
     };
   });
 
